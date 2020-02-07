@@ -70,7 +70,7 @@ const referencesList = {
 			title: `MERN - Сокращение Ссылок с Нуля до Деплоя (Mongo, Express, React, Node)`,
 			info: {
 				theme: `MERN`,
-				author: ``,
+				author: `Владилен Минин`,
 				duration: `03:34:30`,
 				description: ``,
 			},
@@ -81,8 +81,8 @@ const referencesList = {
 			link: `https://www.youtube.com/watch?v=-cZOdWjFwXw`,
 			title: `React JS: 50 вопросов на собеседование`,
 			info: {
-				theme: `SPA/React`,
-				author: ``,
+				theme: `job interview`,
+				author: `Владилен Минин`,
 				duration: ``,
 				description: `job interview`,
 			},
@@ -93,7 +93,7 @@ const referencesList = {
 			link: `https://www.youtube.com/watch?v=ncaWoyLINoI&t=18s`,
 			title: `Как пройти собеседование по JS? И зачем? | Odessa Frontend Community Meetup | Юрий Федоренко`,
 			info: {
-				theme: `JS`,
+				theme: `job interview`,
 				author: `Юрий Федоренко`,
 				duration: ``,
 				description: `job interview`,
@@ -105,7 +105,7 @@ const referencesList = {
 			link: `https://www.youtube.com/watch?v=HsXKiKNdeTI`,
 			title: `Как пройти собеседование по JS? И зачем? vol.2 + викторина | OdessaFrontend Meetup | Юрий Федоренко`,
 			info: {
-				theme: `JS`,
+				theme: `job interview`,
 				author: `Юрий Федоренко`,
 				duration: ``,
 				description: `job interview`,
@@ -117,8 +117,8 @@ const referencesList = {
 			link: `https://www.youtube.com/watch?v=M_pclb-58ZY`,
 			title: `JavaScript интервью. Полный курс по JS собеседованию`,
 			info: {
-				theme: `JavaScript`,
-				author: `Минин`,
+				theme: `job interview`,
+				author: `Владилен Минин`,
 				duration: ``,
 				description: `job interview`,
 			},
@@ -161,12 +161,12 @@ const referencesList = {
 		},
 
 		{
-			id: `?`,
-			link: ``,
-			title: ``,
+			id: `14`,
+			link: `https://www.youtube.com/watch?v=YzEUQXePaVE`,
+			title: `Собеседование в компанию INMYROOM frontend-разработчиком с ЗП 100k`,
 			info: {
-				theme: ``,
-				author: ``,
+				theme: `job interview`,
+				author: `Archakov Blog`,
 				duration: ``,
 				description: ``,
 			},
