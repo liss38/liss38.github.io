@@ -1,9 +1,3 @@
-// 
-// BodyWeightByDay
-// BodyWeightByWeek
-
-
-// @TODO: реализовать формулу, которая из таблицы массы по дням создать/заполняет таблицу массы по неделям
 // (1) ф-я: которая дробит массив по неделям, возвращает массив массивов
 function separateDaysByWeeks(daysList) {
 	const daysByWeeksList = [];
