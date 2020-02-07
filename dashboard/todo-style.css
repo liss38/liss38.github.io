@@ -1,0 +1,9 @@
+.done {
+	text-decoration: line-through; 
+	color: #ccc;
+}
+
+.stage {
+	margin-bottom: 15px;
+	font-weight: bold;
+}
