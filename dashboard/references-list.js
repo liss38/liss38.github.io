@@ -173,13 +173,13 @@ const referencesList = {
 		},
 
 		{
-			id: `?`,
-			link: ``,
-			title: ``,
+			id: `14`,
+			link: `https://www.youtube.com/watch?v=HJBpubsXONM`,
+			title: `Front-end 2020 Roadmap & Trends | Что учить в 2020?`,
 			info: {
-				theme: ``,
-				author: ``,
-				duration: ``,
+				theme: `Vector`,
+				author: `WebDev`,
+				duration: `00:13:33`,
 				description: ``,
 			},
 		},
