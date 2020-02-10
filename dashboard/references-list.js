@@ -173,13 +173,421 @@ const referencesList = {
 		},
 
 		{
-			id: `14`,
+			id: `15`,
 			link: `https://www.youtube.com/watch?v=HJBpubsXONM`,
 			title: `Front-end 2020 Roadmap & Trends | Что учить в 2020?`,
 			info: {
 				theme: `Vector`,
 				author: `WebDev`,
 				duration: `00:13:33`,
+				description: ``,
+			},
+		},
+
+		{
+			id: `16`,
+			link: `https://ru.wikipedia.org/wiki/%D0%9F%D1%80%D0%BE%D0%B3%D1%80%D0%B5%D1%81%D1%81%D0%B8%D0%B2%D0%BD%D0%BE%D0%B5_%D0%B2%D0%B5%D0%B1-%D0%BF%D1%80%D0%B8%D0%BB%D0%BE%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5`,
+			title: `Прогрессивное веб-приложение`,
+			info: {
+				theme: `PWA`,
+				author: `wikipedia`,
+				duration: ``,
+				description: ``,
+			},
+		},
+
+		{
+			id: `17`,
+			link: `https://developers.google.com/web/progressive-web-apps?hl=ru`,
+			title: `Progressive Web Apps`,
+			info: {
+				theme: `PWA`,
+				author: `https://developers.google`,
+				duration: ``,
+				description: ``,
+			},
+		},
+
+		{
+			id: `18`,
+			link: `https://habr.com/ru/post/418923/`,
+			title: `PWA — это просто`,
+			info: {
+				theme: `PWA`,
+				author: `habr`,
+				duration: ``,
+				description: ``,
+			},
+		},
+
+		{
+			id: `19`,
+			link: `https://habr.com/ru/post/340514/`,
+			title: `Тестирование React-Redux приложения`,
+			info: {
+				theme: `TDD/BDD`,
+				author: `habr`,
+				duration: ``,
+				description: ``,
+			},
+		},
+
+		{
+			id: `20`,
+			link: `https://habr.com/ru/company/infowatch/blog/315760/`,
+			title: `Тестирование в React`,
+			info: {
+				theme: `TDD/BDD`,
+				author: `habr`,
+				duration: ``,
+				description: ``,
+			},
+		},
+
+		{
+			id: `21`,
+			link: `https://medium.com/@karafizi/%D1%82%D0%B5%D1%81%D1%82%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-react-%D0%BA%D0%BE%D0%BC%D0%BF%D0%BE%D0%BD%D0%B5%D0%BD%D1%82%D0%BE%D0%B2-%D1%81-jest-%D0%B8-enzyme-%D0%BF%D0%B5%D1%80%D0%B5%D0%B2%D0%BE%D0%B4-985dcab18b7e`,
+			title: `Тестирование React компонентов с Jest и Enzyme (перевод)`,
+			info: {
+				theme: `TDD/BDD`,
+				author: `madium`,
+				duration: ``,
+				description: ``,
+			},
+		},
+
+		{
+			id: `22`,
+			link: `https://medium.com/devschacht/what-and-how-to-test-with-jest-and-enzyme-full-instruction-on-react-components-testing-d3504f3fbc54`,
+			title: `Что и как тестировать с помощью Jest и Enzyme. Полная инструкция по тестированию React-компонентов`,
+			info: {
+				theme: `TDD/BDD`,
+				author: `medium`,
+				duration: ``,
+				description: ``,
+			},
+		},
+
+		{
+			id: `23`,
+			link: `https://monsterlessons.com/project/series/redux-js-dlya-nachinayushih`,
+			title: `Redux js для начинающих`,
+			info: {
+				theme: `Redux`,
+				author: `monsterlessons`,
+				duration: ``,
+				description: ``,
+			},
+		},
+
+		{
+			id: `24`,
+			link: `https://www.youtube.com/watch?v=M_pclb-58ZY`,
+			title: `JavaScript интервью. Полное пособие (типы данных, контекст, прототипы и многое другое)`,
+			info: {
+				theme: `job interview`,
+				author: ``,
+				duration: ``,
+				description: ``,
+			},
+		},
+
+		{
+			id: `25`,
+			link: `https://tproger.ru/translations/14-templates-to-answer-interview-questions/`,
+			title: `14 шаблонов, которые помогут ответить на любой вопрос по коду на собеседовании`,
+			info: {
+				theme: `job interview`,
+				author: ``,
+				duration: ``,
+				description: ``,
+			},
+		},
+
+		{
+			id: `26`,
+			link: `https://tproger.ru/translations/common-javascript-interview-challenges/`,
+			title: `Собеседование на должность JavaScript-разработчика: популярные задачи с разбором решений`,
+			info: {
+				theme: `job interview`,
+				author: ``,
+				duration: ``,
+				description: ``,
+			},
+		},
+
+		{
+			id: `27`,
+			link: `https://www.cat-in-web.ru/45-js-questions/`,
+			title: `45 вопросов по JavaScript с собеседований`,
+			info: {
+				theme: `job interview`,
+				author: ``,
+				duration: ``,
+				description: ``,
+			},
+		},
+
+		{
+			id: `28`,
+			link: `https://maxpfrontend.ru/vebinary/voprosy-dlya-sobesedovaniya-javascript-razrabotchika/`,
+			title: `Вопросы для собеседования javascript разработчика`,
+			info: {
+				theme: `job interview`,
+				author: ``,
+				duration: ``,
+				description: ``,
+			},
+		},
+
+		{
+			id: `29`,
+			link: `https://habr.com/ru/post/231071/`,
+			title: `Собеседование на должность JavaScript разработчика`,
+			info: {
+				theme: `job interview`,
+				author: ``,
+				duration: ``,
+				description: ``,
+			},
+		},
+
+		{
+			id: `30`,
+			link: `https://proglib.io/p/9-js-questions/`,
+			title: `9 вопросов для получения должности JavaScript-разработчик`,
+			info: {
+				theme: `job interview`,
+				author: ``,
+				duration: ``,
+				description: ``,
+			},
+		},
+
+		{
+			id: `31`,
+			link: `https://github.com/kix/reverse-interview/blob/master/README.md`,
+			title: `Обратное собеседование(Список вопросов, которые нужно не забыть задать работодателю при собеседовании)`,
+			info: {
+				theme: `job interview`,
+				author: ``,
+				duration: ``,
+				description: ``,
+			},
+		},
+
+		{
+			id: `32`,
+			link: ` https://www.youtube.com/watch?v=hFOZYaVHD6A`,
+			title: `Как стать программистом! 3 бесплатных крутых шага! (JavaScript, Front-end)`,
+			info: {
+				theme: `job interview`,
+				author: ``,
+				duration: ``,
+				description: ``,
+			},
+		},
+
+		{
+			id: `?`,
+			link: ``,
+			title: ``,
+			info: {
+				theme: ``,
+				author: ``,
+				duration: ``,
+				description: ``,
+			},
+		},
+
+		{
+			id: `?`,
+			link: ``,
+			title: ``,
+			info: {
+				theme: ``,
+				author: ``,
+				duration: ``,
+				description: ``,
+			},
+		},
+
+		{
+			id: `?`,
+			link: ``,
+			title: ``,
+			info: {
+				theme: ``,
+				author: ``,
+				duration: ``,
+				description: ``,
+			},
+		},
+
+		{
+			id: `?`,
+			link: ``,
+			title: ``,
+			info: {
+				theme: ``,
+				author: ``,
+				duration: ``,
+				description: ``,
+			},
+		},
+
+		{
+			id: `?`,
+			link: ``,
+			title: ``,
+			info: {
+				theme: ``,
+				author: ``,
+				duration: ``,
+				description: ``,
+			},
+		},
+
+		{
+			id: `?`,
+			link: ``,
+			title: ``,
+			info: {
+				theme: ``,
+				author: ``,
+				duration: ``,
+				description: ``,
+			},
+		},
+
+		{
+			id: `?`,
+			link: ``,
+			title: ``,
+			info: {
+				theme: ``,
+				author: ``,
+				duration: ``,
+				description: ``,
+			},
+		},
+
+		{
+			id: `?`,
+			link: ``,
+			title: ``,
+			info: {
+				theme: ``,
+				author: ``,
+				duration: ``,
+				description: ``,
+			},
+		},
+
+		{
+			id: `?`,
+			link: ``,
+			title: ``,
+			info: {
+				theme: ``,
+				author: ``,
+				duration: ``,
+				description: ``,
+			},
+		},
+
+		{
+			id: `?`,
+			link: ``,
+			title: ``,
+			info: {
+				theme: ``,
+				author: ``,
+				duration: ``,
+				description: ``,
+			},
+		},
+
+		{
+			id: `?`,
+			link: ``,
+			title: ``,
+			info: {
+				theme: ``,
+				author: ``,
+				duration: ``,
+				description: ``,
+			},
+		},
+
+		{
+			id: `?`,
+			link: ``,
+			title: ``,
+			info: {
+				theme: ``,
+				author: ``,
+				duration: ``,
+				description: ``,
+			},
+		},
+
+		{
+			id: `?`,
+			link: ``,
+			title: ``,
+			info: {
+				theme: ``,
+				author: ``,
+				duration: ``,
+				description: ``,
+			},
+		},
+
+		{
+			id: `?`,
+			link: ``,
+			title: ``,
+			info: {
+				theme: ``,
+				author: ``,
+				duration: ``,
+				description: ``,
+			},
+		},
+
+		{
+			id: `?`,
+			link: ``,
+			title: ``,
+			info: {
+				theme: ``,
+				author: ``,
+				duration: ``,
+				description: ``,
+			},
+		},
+
+		{
+			id: `?`,
+			link: ``,
+			title: ``,
+			info: {
+				theme: ``,
+				author: ``,
+				duration: ``,
+				description: ``,
+			},
+		},
+
+		{
+			id: `?`,
+			link: ``,
+			title: ``,
+			info: {
+				theme: ``,
+				author: ``,
+				duration: ``,
 				description: ``,
 			},
 		},

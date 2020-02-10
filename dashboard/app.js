@@ -3,7 +3,7 @@ console.log(referencesList.content)
 const tmplReferenceItem = (item) => {
 	return `<div class="reference-item" style="margin-bottom: 25px;">
 				<span style="color: #ccc; font-weight: bold;">#${item.id}</span>
-				<a href="${item.link}" target="_blank">${item.title}</a>
+				<a href="${item.link}" target="_blank" style="color: #551a8b;">${item.title}</a>
 				<span style="font-size: 10px; color: gray;">${item.info.duration}</span>
 				<span style="font-size: 10px; font-weight: bold;">${item.info.theme}</span>
 			</div>
