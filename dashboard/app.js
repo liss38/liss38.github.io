@@ -7,14 +7,14 @@ const tmplReferenceItem = (item, mode) => {
 		`;
 	}
 
-
-	return `<div class="reference-item" style="margin-bottom: 25px;">
-				<span style="color: #ccc; font-weight: bold;">#${item.id}</span>
-				<a href="${item.link}" target="_blank" style="color: #551a8b;">${item.title}</a>
-				<span style="font-size: 10px; color: gray;">${item.info.duration}</span>
-				<span style="font-size: 10px; font-weight: bold;">${item.info.theme}</span>
-			</div>
-			`;
+	return `
+		<div class="reference-item">
+			<span class="reference-item__field  reference-item__field--id">#${item.id}</span>
+			<a class="reference-item__field  reference-item__field--link" href="${item.link}" target="_blank">${item.title}</a>
+			<span class="reference-item__field  reference-item__field--duration">${item.info.duration}</span>
+			<span class="reference-item__field  reference-item__field--theme">${item.info.theme}</span>
+		</div>
+	`;
 };
 
 const tmplReferencesList = (list, mode) => {
@@ -23,7 +23,6 @@ const tmplReferencesList = (list, mode) => {
 	list.forEach( (item) => {
 		html += tmplReferenceItem(item, `list-item`)
 	});
-
 	html = `<ul class="simple-list">${html}</ul>`;
 	
 	return html;
@@ -32,7 +31,10 @@ const tmplReferencesList = (list, mode) => {
 const tmplDashboardTopic = (topic) => {
 	return `
 		<div class="dashboard-topic  dashboard-topic--${topic.key}" data-topic-key="${topic.key}">
-			<div class="dashboard-topic__header"><span>${topic.header}</span></div>
+			<div class="dashboard-topic__header">
+				<span>${topic.header}</span>
+				<span class="dashboard-topic__description">${topic.description}</span>
+			</div>
 			<div class="dashboard-topic__content">${topic.content}</div>
 			<div class="dashboard-topic__footer">${topic.footer}</div>
 		</div>
@@ -68,8 +70,6 @@ const renderDashboardTopicsList = (keyList) => {
 	
 
 	for(key in keyList) {
-		console.log(key, filteringReferencesListByThemes(keyList[key].searchKey) );
-
 		const topic = {...keyList[key]};
 
 		topic.key = key;

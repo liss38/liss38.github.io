@@ -1,7 +1,8 @@
 const dashbordTopicsList = {
 	'job-interview': {
-		header: `ИНТЕРВЬЮ (Вопросы, интервью, собеседования)`,
+		header: `ИНТЕРВЬЮ`,
 		searchKey: `job interview,test-list,exams`,
+		description: `Вопросы, интервью, собеседования`,
 		footer: ``,
 	},
 	'redux-list': {
@@ -12,6 +13,12 @@ const dashbordTopicsList = {
 	'react-list': {
 		header: `SPA/React`,
 		searchKey: `spa/react,react`,
+		footer: ``,
+	},
+	'long-vehicle': {
+		header: `База`,
+		searchKey: `React Ecosystem`,
+		description: `# "БАЛАНДА"  (База, гранит, фундамент, основа, "Инвестирование", Навсегда, глубоко, внутри, неизменно, Обязаловка, Протеин, Белок)`,
 		footer: ``,
 	},
 };

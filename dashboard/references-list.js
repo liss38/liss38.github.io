@@ -571,12 +571,12 @@ const referencesList = {
 		},
 
 		{
-			id: `?`,
-			link: ``,
-			title: ``,
+			id: `48`,
+			link: `https://github.com/enaqx/awesome-react`,
+			title: `awesome-react  (Экосистема Реакта)`,
 			info: {
-				theme: ``,
-				author: ``,
+				theme: `React Ecosystem`,
+				author: `Nick Raienko`,
 				duration: ``,
 				description: ``,
 			},
