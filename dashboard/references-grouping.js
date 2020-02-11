@@ -1,3 +1,0 @@
-const referencesGrouping = {
-	'job-interview': [],
-};
