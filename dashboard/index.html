@@ -1,8 +1,10 @@
-<!DOCTYPE html>
+assets/js-data/<!DOCTYPE html>
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
 	<title>Dashboard</title>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 
 	<!-- удалить после завершения прототипа -->
 	<link rel="stylesheet" href="todo-style.css">
@@ -10,7 +12,12 @@
 
 
 
+	<!--  -->
+	<link rel="stylesheet" href="assets/css/page.css">
+	<link rel="stylesheet" href="assets/css/page-item.css">
 	<link rel="stylesheet" href="app.css">
+
+	<!--  -->
 	<link rel="stylesheet" href="assets/css/filter.css">
 	<link rel="stylesheet" href="assets/css/dashboard-topic.css">
 	<link rel="stylesheet" href="assets/css/simple-list.css">
@@ -22,7 +29,7 @@
 	<ul>
 		<li class="done">Сделать инит</li>
 		<li class="done">Набросать общий контент и план</li>
-		<li class="done  stage">"причесать" дизайн, попытка #1</li>
+		<li class="done  stage">"причесать" дизайн, попытка #1  [06.02.2020]</li>
 		
 		<li class="done">Для ссылок "сгенрировать" айдишники</li>
 		<li class="done">Сделать блок "ПОДГОТОВКА К ЭКЗАМЕНАМ" для собесов и отобразить в нём соответствующие ссылки</li>
@@ -30,25 +37,32 @@
 		<li class="done">добавить ссылку на семантическое дерево экосистемы реакта</li>
 		<li class="done">потестить этот интерфейс на мобилке и сделать заметки</li>
 		<li class="done">вынести инлайн стили в app.css</li>
-		<li class="done  stage">"причесать" дизайн, попытка #2</li>
+		<li class="done  stage">"причесать" дизайн, попытка #2  [11.02.2020]</li>
 
 
+		<li>Решить, что делать с этим: https://github.com/liss38/-C-/blob/master/references.md  (-> ссылки сделать в интерфесе, а в файле references.md сделать ссылку на этот интерфейс, затем удалить ненужные ссылки, а потом и вовсе удалить)</li>
+		<li>--------- Тестирование</li>
+		<li>---------- 10, 20, 30, ... всяких шняг и приблуд, которые ты должен знать и без которых ты - лох и гавно галимое и бугага</li>
+		<li>--------- Пути и истории, стратегии, чему я научился и где я ошибся, рекомендации и советы((Учись у других))</li>
+		<li>--------- Хочу стать .. , программы обучений, карты знаний</li>
+		<li>----------- Руководства для самых маленьких и начинающих и новичков и другие введения и знакомтсва</li>
 		<li>Описать план, метафору, темы для блока "БАЛАНДА"</li>
-		<li>Роутинг, фильтр/навигация: продумать группировку и что там будет отображаться</li>
 		<li>Дизайн и наполнение блока "ЛАЙВКОДИНГИ"</li>
 		<li>Дизайн и наполнение блока "КУРСЫ"</li>
-		<li>Дизайн и наполнение блока "ТОЧКИ ПРОБИТИЯ"</li>
-		<li>Дизайн и наполнение блока "МОЙ_СТАФ"</li>
 		<li class="stage">"причесать" дизайн, попытка #3</li>
 
-		<li>Решить, что делать с этим: https://github.com/liss38/-C-/blob/master/references.md</li>
+		
+		<li>Дизайн и наполнение блока "ПЛАНКА ПРОБИТИЯ"</li>
+		<li>Дизайн и наполнение блока "МОЙ_СТАФ"</li>
 		<li>Решить, что делать с этим: https://github.com/liss38/-C-/blob/master/what-s-next.md</li>
-		<li>из того, что нужно добавить в дамп сюда</li>
-		<li></li>
+		<li>Решить, что делать с этим: https://github.com/liss38/-C-/blob/master/SelfPresentationAndPromotion.md</li>
 		<li class="stage">"причесать" дизайн, попытка #4</li>
 
-		<li>Решить, что делать с этим: https://github.com/liss38/-C-/blob/master/SelfPresentationAndPromotion.md</li>
+		
+		<li>Роутинг, фильтр/навигация: продумать группировку и что там будет отображаться</li>
 		<li class="stage">"причесать" дизайн, попытка #5</li>
+
+
 		<li class="stage">"причесать" дизайн, попытка #6</li>
 		<li class="stage">"причесать" дизайн, попытка #7</li>
 		<li class="stage">"причесать" дизайн, попытка #8</li>
@@ -66,20 +80,49 @@
 <h2><a href="references.html" target="_blank">references.html</a></h2>
 <h2><a href="https://github.com/liss38/-C-/blob/master/references.md" target="_blank">references.md</a></h2>
 
-<!-- filter by theme -->
-<div id="js-filtering-references-list-by-themes" class="filter-panel"></div>
-<!-- filter by theme;end -->
+<div class="page">
+	<header class="page__header">
+		
+		<!-- navi -->
+		<div class="navi-panel">
+			<nav class="main-navi">
+				<ul class="main-navi__list">
+					<li class="main-navi__item"><a href="#" class="main-navi__link">2020 frontendmap</a></li>
+					<li class="main-navi__item"><a href="#" class="main-navi__link">react roadmap</a></li>
+					<li class="main-navi__item"><a href="#references-list" class="main-navi__link">references</a></li>
+					<li class="main-navi__item"><a href="#dashboard" class="main-navi__link">dashboard</a></li>
+					<li class="main-navi__item"><a href="#" class="main-navi__link">Статьи/Конспекты/Читшиты/Схемы и инфографика</a></li>
+					<li class="main-navi__item"><a href="#" class="main-navi__link"></a></li>
+					<li class="main-navi__item"><a href="#" class="main-navi__link"></a></li>
+					<li class="main-navi__item"><a href="#" class="main-navi__link"></a></li>
+					<li class="main-navi__item"><a href="#" class="main-navi__link"></a></li>
+					<li class="main-navi__item"><a href="#" class="main-navi__link"></a></li>
+				</ul>
+			</nav>
+		</div>
 
+		<!-- filter by theme -->
+		<div id="js-filtering-references-list-by-themes" class="filter-panel"></div>
 
-<!-- dashboard -->
-<div id="dashboard" class="dashboard">
-	<div class="dashboard-topic">
-		<div class="dashboard-topic__header"></div>
-		<div class="dashboard-topic__content"></div>
-		<div class="dashboard-topic__footer"></div>
-	</div>
+		
+
+	</header>
+
+	<main class="page__main">
+		<!-- dashboard -->
+		<div id="dashboard" class="page-item"></div>
+		<div id="references-list" class="page-item"></div>
+		<!-- dashboard;endв -->
+	</main>
+	<footer class="page__footer"></footer>
 </div>
-<!-- dashboardжутв -->
+
+
+
+
+
+
+
 
 
 
@@ -196,9 +239,10 @@
 
 
 	
-	<script src="references-list.js"></script>
-	<script src="dashbord-topics-list.js"></script>
-	<script src="utils.js"></script>
+	<script src="assets/js-data/references-list.js"></script>
+	<script src="assets/js-data/dashbord-topics-list.js"></script>
+	<script src="assets/js-data/sources-list.js"></script>
+	<script src="assets/js/utils.js"></script>
 	<script src="app.js"></script>
 </body>
 </html>

@@ -53,14 +53,15 @@ const renderReferenceThemesList = (list) => {
 };
 
 const renderReferencesList = (list) => {
-	let htmlReferencesList = list.map(tmplReferenceItem)
+	const $referencesList = document.getElementById(`references-list`);
+	let htmlReferencesList = list.map(tmplReferenceItem);
 	htmlReferencesList = htmlReferencesList.join(``);
 
 	const wrapper = document.createElement('div');
 	wrapper.className = 'references-list';
 	wrapper.innerHTML = htmlReferencesList;
 
-	document.querySelector('body').appendChild(wrapper);
+	$referencesList.appendChild(wrapper);
 };
 
 
