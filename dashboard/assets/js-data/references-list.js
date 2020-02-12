@@ -919,16 +919,149 @@ const referencesList = {
 		},
 
 		{
-			id: `?`,
-			link: ``,
-			title: ``,
+			id: `77`,
+			link: `https://habr.com/ru/company/otus/blog/466873/`,
+			title: `5 вещей, которые чаще всего не понимают новички в JavaScript`,
 			info: {
-				theme: ``,
+				theme: `10/20/30/...`,
 				author: ``,
 				duration: ``,
 				description: ``,
 			},
 		},
+
+		{
+			id: `78`,
+			link: `https://nuancesprog.ru/p/2865/`,
+			title: `10 вещей, которые надо знать, чтобы стать мастером JavaScript`,
+			info: {
+				theme: `10/20/30/...`,
+				author: ``,
+				duration: ``,
+				description: ``,
+			},
+		},
+
+		{
+			id: `79`,
+			link: `https://nuancesprog.ru/p/4727/`,
+			title: `8 лучших платформ и библиотек JavaScript для машинного обучения`,
+			info: {
+				theme: `10/20/30/...`,
+				author: ``,
+				duration: ``,
+				description: ``,
+			},
+		},
+
+		{
+			id: `80`,
+			link: `https://nuancesprog.ru/p/4404/`,
+			title: `7 FrontEnd трендов и инструментов для JavaScript на 2020`,
+			info: {
+				theme: `10/20/30/...`,
+				author: ``,
+				duration: ``,
+				description: ``,
+			},
+		},
+
+		{
+			id: `81`,
+			link: `https://nuancesprog.ru/p/3897/`,
+			title: `15 идей для вашего приложения  (1)`,
+			info: {
+				theme: `10/20/30/...`,
+				author: ``,
+				duration: ``,
+				description: ``,
+			},
+		},
+
+		{
+			id: `82`,
+			link: `https://nuancesprog.ru/p/3914/`,
+			title: `15 идей для вашего приложения  (2)`,
+			info: {
+				theme: `10/20/30/...`,
+				author: ``,
+				duration: ``,
+				description: ``,
+			},
+		},
+
+		{
+			id: `83`,
+			link: `https://nuancesprog.ru/p/3921/`,
+			title: `15 идей для вашего приложения  (3)`,
+			info: {
+				theme: `10/20/30/...`,
+				author: ``,
+				duration: ``,
+				description: ``,
+			},
+		},
+
+		{
+			id: `84`,
+			link: `https://nuancesprog.ru/p/4777/`,
+			title: `5 вредных привычек неэффективных программистов`,
+			info: {
+				theme: `10/20/30/...`,
+				author: ``,
+				duration: ``,
+				description: ``,
+			},
+		},
+
+		{
+			id: `85`,
+			link: `https://www.youtube.com/watch?v=qAgoFGUYSac`,
+			title: `Топ структур данных которые должен знать программист`,
+			info: {
+				theme: `10/20/30/...`,
+				author: ``,
+				duration: ``,
+				description: ``,
+			},
+		},
+
+		{
+			id: `86`,
+			link: `https://habr.com/ru/company/netologyru/blog/334914/`,
+			title: `10 типов структур данных, которые нужно знать + видео и упражнения`,
+			info: {
+				theme: `10/20/30/...`,
+				author: ``,
+				duration: ``,
+				description: ``,
+			},
+		},
+
+		{
+			id: `87`,
+			link: `https://tproger.ru/experts/7/`,
+			title: `Какие алгоритмы должен знать уважающий себя программист?`,
+			info: {
+				theme: `10/20/30/...`,
+				author: ``,
+				duration: ``,
+				description: ``,
+			},
+		},
+
+		{
+			id: `88`,
+			link: `https://habr.com/ru/post/359192/`,
+			title: `Классические алгоритмы и структуры данных на JavaScript`,
+			info: {
+				theme: `10/20/30/...`,
+				author: ``,
+				duration: ``,
+				description: ``,
+			},
+		},
+
 
 		{
 			id: `?`,
