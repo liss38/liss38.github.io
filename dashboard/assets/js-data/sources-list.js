@@ -3,21 +3,33 @@ const sourcesList = {
 };
 
 /*
-(Личности и их блоги)
 
+
+**(Личности и их блоги)**
+```
  $ https://www.youtube.com/channel/UCX3w3jB05SHLbGjZPR0PM6g  -  Senior Software Vlogger
  $ https://www.youtube.com/channel/UCe_TcJarfs-HKy3NySy8Kng  -  Software Engineer - Soer
  $ https://www.youtube.com/channel/UCBNlINWfd08qgDkUTaUY4_w  -  ExtremeCode
  $ https://www.youtube.com/channel/UCKvwrpqUvFNRinpTFouLLiQ  -  SHIFU
-(Школы)
+```
 
+
+
+
+**(Школы)**
+```
  $ https://github.com/zualex/devmap (Карта развития веб-разработчика)
  $ https://monsterlessons.com 
  $ https://coursehunter.net
  $ https://codedojo.ru/
  $ https://htmlacademy.ru/
-(Каналы)
+```
 
+
+
+
+**(Каналы)**
+```
  $ https://nuancesprog.ru/?s=java+script
  $ https://nuancesprog.ru/web_dev/
  $ https://nuancesprog.ru/dev/
@@ -34,4 +46,5 @@ const sourcesList = {
  $ https://www.youtube.com/channel/UCTW0FUhT0m-Bqg2trTbSs0g  -  IT-KAMASUTRA
  $ https://www.youtube.com/channel/UCvasfOIImo7D9lQkb1Wc1tw  -  ProConf
  $ https://www.youtube.com/channel/UCu5rhLxjbCD2qP9lJu9ygdA/featured  -  Minsk JSON
+```
 */

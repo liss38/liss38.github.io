@@ -22,9 +22,28 @@ const dashbordTopicsList = {
 		footer: ``,
 	},
 	'test-list': {
-		header: `Test-list`,
-		searchKey: `Тестирование`,
-		description: `Тестирование, онлайн тесты`,
+		header: `Exam/Test`,
+		searchKey: `Exam/Test`,
+		description: `Тестирование, онлайн тесты, Exam/Test`,
+		footer: ``,
+	},
+	'vector': {
+		header: `Vector`,
+		searchKey: `Vector`,
+		description: `Вектор развития, targetline, Хочу стать .. , программы обучений, карты знаний`,
+		footer: ``,
+	},
+	'be-tonus': {
+		header: `Будь в тонусе`,
+		searchKey: `10/20/30/..`,
+		description: `10, 20, 30, ... всяких штуоквин, которые очень круто знать и без которых ты не отличаешься от большинства`,
+		footer: ``,
+	},
+	'js-runtime': {
+		header: `JS runtime (EventLoop)`,
+		searchKey: `JS runtime (EventLoop)`,
+		description: ``,
 		footer: ``,
 	},
 };
+

@@ -587,7 +587,7 @@ const referencesList = {
 			link: `https://use-web.ru/testpractice.php?action=js`,
 			title: `ТЕСТ ПО JAVASCRIPT`,
 			info: {
-				theme: `Тестирование`,
+				theme: `Exam/Test`,
 				author: ``,
 				duration: ``,
 				description: ``,
@@ -599,7 +599,7 @@ const referencesList = {
 			link: `https://geekbrains.ru/tests/21`,
 			title: `Тест по JavaScript. Начальный уровень`,
 			info: {
-				theme: `Тестирование`,
+				theme: `Exam/Test`,
 				author: `geekbrains`,
 				duration: ``,
 				description: ``,
@@ -611,7 +611,7 @@ const referencesList = {
 			link: `https://geekbrains.ru/tests/174`,
 			title: `Тест по JavaScript. Средний уровень`,
 			info: {
-				theme: `Тестирование`,
+				theme: `Exam/Test`,
 				author: `geekbrains`,
 				duration: ``,
 				description: ``,
@@ -623,7 +623,7 @@ const referencesList = {
 			link: `https://geekbrains.ru/tests/15`,
 			title: `Тест по JavaScript. Сложный уровень`,
 			info: {
-				theme: `Тестирование`,
+				theme: `Exam/Test`,
 				author: `geekbrains`,
 				duration: ``,
 				description: ``,
@@ -635,7 +635,7 @@ const referencesList = {
 			link: `https://geekbrains.ru/tests/35`,
 			title: `Тест по JavaScript. Спортивный тест`,
 			info: {
-				theme: `Тестирование`,
+				theme: `Exam/Test`,
 				author: `geekbrains`,
 				duration: ``,
 				description: ``,
@@ -647,7 +647,7 @@ const referencesList = {
 			link: `http://perfectionkills.com/javascript-quiz/`,
 			title: `Javascript quiz`,
 			info: {
-				theme: `Тестирование`,
+				theme: `Exam/Test`,
 				author: `Perfection Kills`,
 				duration: ``,
 				description: ``,
@@ -659,7 +659,7 @@ const referencesList = {
 			link: `https://learn.javascript.ru/quiz`,
 			title: `Тестирование знаний`,
 			info: {
-				theme: `Тестирование`,
+				theme: `Exam/Test`,
 				author: `learn.javascript.ru`,
 				duration: ``,
 				description: ``,
@@ -679,11 +679,47 @@ const referencesList = {
 		},
 
 		{
-			id: `?`,
-			link: ``,
-			title: ``,
+			id: `57`,
+			link: `https://tproger.ru/curriculum/intro-to-frontend-development/`,
+			title: `Хочу стать frontend разработчиком: базовые знания и план обучения`,
 			info: {
-				theme: ``,
+				theme: `Vector`,
+				author: `tproger`,
+				duration: ``,
+				description: ``,
+			},
+		},
+
+		{
+			id: `58`,
+			link: `https://tproger.ru/curriculum/javascript-curriculum/`,
+			title: `Хочу стать веб-разработчиком: подробный план по изучению JavaScript`,
+			info: {
+				theme: `Vector`,
+				author: `tproger`,
+				duration: ``,
+				description: ``,
+			},
+		},
+
+		{
+			id: `59`,
+			link: `https://tproger.ru/curriculum/intro-to-frontend-development/`,
+			title: `Хочу стать frontend разработчиком: базовые знания и план обучения`,
+			info: {
+				theme: `Vector`,
+				author: `tproger`,
+				duration: ``,
+				description: ``,
+			},
+		},
+
+		{
+			id: `60`,
+			link: `https://telegraf.design/dizajn-tablits-dlya-postoyannogo-ispolzovaniya/`,
+			title: `Дизайн таблиц для постоянного использования`,
+			info: {
+				theme: `UI/UX`,
 				author: ``,
 				duration: ``,
 				description: ``,
@@ -691,11 +727,47 @@ const referencesList = {
 		},
 
 		{
-			id: `?`,
-			link: ``,
-			title: ``,
+			id: `61`,
+			link: `https://tproger.ru/curriculum/computer-science-step-by-step/`,
+			title: `Как разобраться в Computer Science самостоятельно`,
 			info: {
-				theme: ``,
+				theme: `Vector`,
+				author: `tproger`,
+				duration: ``,
+				description: ``,
+			},
+		},
+
+		{
+			id: `62`,
+			link: `https://tproger.ru/curriculum/data-scientist-curriculum/`,
+			title: `План обучения для специалиста по Data Science`,
+			info: {
+				theme: `Vector`,
+				author: `tproger`,
+				duration: ``,
+				description: ``,
+			},
+		},
+
+		{
+			id: `63`,
+			link: `https://tproger.ru/curriculum/devops/`,
+			title: `Кто такой DevOps и как им стать: план обучения`,
+			info: {
+				theme: `Vector`,
+				author: `tproger`,
+				duration: ``,
+				description: ``,
+			},
+		},
+
+		{
+			id: `64`,
+			link: `https://habr.com/ru/company/ruvds/blog/337042/`,
+			title: `Как работает JS: обзор движка, механизмов времени выполнения, стека вызовов`,
+			info: {
+				theme: `JS runtime (EventLoop)`,
 				author: ``,
 				duration: ``,
 				description: ``,
@@ -703,11 +775,143 @@ const referencesList = {
 		},
 
 		{
-			id: `?`,
-			link: ``,
-			title: ``,
+			id: `65`,
+			link: `https://nuancesprog.ru/p/2583/`,
+			title: `Асинхронный JavaScript ― Цикл обработки событий`,
 			info: {
-				theme: ``,
+				theme: `JS runtime (EventLoop)`,
+				author: ``,
+				duration: ``,
+				description: ``,
+			},
+		},
+
+		{
+			id: `66`,
+			link: `https://medium.com/@olinations/the-javascript-runtime-environment-d58fa2e60dd0`,
+			title: `The Javascript Runtime Environment`,
+			info: {
+				theme: `JS runtime (EventLoop)`,
+				author: ``,
+				duration: ``,
+				description: ``,
+			},
+		},
+
+		{
+			id: `67`,
+			link: `https://skillbox.ru/media/code/event_loop_chast_1/`,
+			title: `Как управлять event loop в JavaScript. Часть 1`,
+			info: {
+				theme: `JS runtime (EventLoop)`,
+				author: ``,
+				duration: ``,
+				description: ``,
+			},
+		},
+
+		{
+			id: `68`,
+			link: `https://skillbox.ru/media/code/event_loop_chast_2/`,
+			title: `Как управлять event loop в JavaScript. Часть 2`,
+			info: {
+				theme: `JS runtime (EventLoop)`,
+				author: ``,
+				duration: ``,
+				description: ``,
+			},
+		},
+
+		{
+			id: `69`,
+			link: `https://www.youtube.com/watch?v=8cV4ZvHXQL4`,
+			title: `Про цикл событий в JavaScript или "как на самом деле работает асинхронность"?`,
+			info: {
+				theme: `JS runtime (EventLoop)`,
+				author: ``,
+				duration: ``,
+				description: ``,
+			},
+		},
+
+		{
+			id: `70`,
+			link: `https://medium.com/better-programming/how-javascript-works-1706b9b66c4d`,
+			title: `How JavaScript Works`,
+			info: {
+				theme: `JS runtime (EventLoop)`,
+				author: ``,
+				duration: ``,
+				description: ``,
+			},
+		},
+
+		{
+			id: `71`,
+			link: `https://learn.javascript.ru/closure`,
+			title: `Замыкание`,
+			info: {
+				theme: `JS runtime (EventLoop)`,
+				author: ``,
+				duration: ``,
+				description: ``,
+			},
+		},
+
+		{
+			id: `72`,
+			link: `https://habr.com/ru/post/309318/`,
+			title: `4 вида утечек памяти в JavaScript и как с ними бороться`,
+			info: {
+				theme: `JS runtime (EventLoop)`,
+				author: ``,
+				duration: ``,
+				description: ``,
+			},
+		},
+
+		{
+			id: `73`,
+			link: `https://developer.mozilla.org/ru/docs/Web/JavaScript/Memory_Management`,
+			title: `Управление памятью`,
+			info: {
+				theme: `JS runtime (EventLoop)`,
+				author: ``,
+				duration: ``,
+				description: ``,
+			},
+		},
+
+		{
+			id: `74`,
+			link: `https://developer.mozilla.org/ru/docs/Web/JavaScript/EventLoop`,
+			title: `Параллельная модель и цикл событий`,
+			info: {
+				theme: `JS runtime (EventLoop)`,
+				author: ``,
+				duration: ``,
+				description: ``,
+			},
+		},
+
+		{
+			id: `75`,
+			link: `https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Strict_mode`,
+			title: `Strict mode`,
+			info: {
+				theme: `JS runtime (EventLoop)`,
+				author: ``,
+				duration: ``,
+				description: ``,
+			},
+		},
+
+		{
+			id: `76`,
+			link: `http://perfectionkills.com/understanding-delete/`,
+			title: `Understanding delete`,
+			info: {
+				theme: `JS runtime (EventLoop)`,
 				author: ``,
 				duration: ``,
 				description: ``,
