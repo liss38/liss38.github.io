@@ -45,5 +45,11 @@ const dashbordTopicsList = {
 		description: ``,
 		footer: ``,
 	},
+	'es-6-7-8-etc': {
+		header: `ES 6, 7, 8, 9, ...`,
+		searchKey: `EcmaScript`,
+		description: ``,
+		footer: ``,
+	},
 };
 
