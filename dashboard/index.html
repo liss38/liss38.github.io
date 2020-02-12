@@ -1,4 +1,4 @@
-assets/js-data/<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
@@ -41,7 +41,7 @@ assets/js-data/<!DOCTYPE html>
 
 
 		<li>Решить, что делать с этим: https://github.com/liss38/-C-/blob/master/references.md  (-> ссылки сделать в интерфесе, а в файле references.md сделать ссылку на этот интерфейс, затем удалить ненужные ссылки, а потом и вовсе удалить)</li>
-		<li>--------- Тестирование</li>
+		<li class="done">--------- Тестирование</li>
 		<li>---------- 10, 20, 30, ... всяких шняг и приблуд, которые ты должен знать и без которых ты - лох и гавно галимое и бугага</li>
 		<li>--------- Пути и истории, стратегии, чему я научился и где я ошибся, рекомендации и советы((Учись у других))</li>
 		<li>--------- Хочу стать .. , программы обучений, карты знаний</li>
@@ -88,7 +88,7 @@ assets/js-data/<!DOCTYPE html>
 			<nav class="main-navi">
 				<ul class="main-navi__list">
 					<li class="main-navi__item"><a href="#" class="main-navi__link">2020 frontendmap</a></li>
-					<li class="main-navi__item"><a href="#" class="main-navi__link">react roadmap</a></li>
+					<li class="main-navi__item"><a href="#react-roadmap" class="main-navi__link">react roadmap</a></li>
 					<li class="main-navi__item"><a href="#references-list" class="main-navi__link">references</a></li>
 					<li class="main-navi__item"><a href="#dashboard" class="main-navi__link">dashboard</a></li>
 					<li class="main-navi__item"><a href="#" class="main-navi__link">Статьи/Конспекты/Читшиты/Схемы и инфографика</a></li>
@@ -101,18 +101,30 @@ assets/js-data/<!DOCTYPE html>
 			</nav>
 		</div>
 
-		<!-- filter by theme -->
-		<div id="js-filtering-references-list-by-themes" class="filter-panel"></div>
+		
 
 		
 
 	</header>
 
 	<main class="page__main">
-		<!-- dashboard -->
+
+		<!-- dashboard page -->
 		<div id="dashboard" class="page-item"></div>
-		<div id="references-list" class="page-item"></div>
-		<!-- dashboard;endв -->
+		
+	
+		<div id="references-list" class="page-item">
+			<!-- filter by theme -->
+			<div id="js-filtering-references-list-by-themes" class="filter-panel"></div>
+
+			<!-- page content -->
+		</div>
+
+		<!-- react-roadmap page -->
+		<div id="react-roadmap" class="page-item">
+			<img id="react-roadmap-scheme" src="assets/content/react-roadmap.png" alt="react-roadmap" width="1000">
+		</div>
+		
 	</main>
 	<footer class="page__footer"></footer>
 </div>
@@ -234,7 +246,22 @@ assets/js-data/<!DOCTYPE html>
 
 
 
-	<img src="assets/content/react-roadmap.png" alt="" width="1000">
+	
+	<hr />
+
+
+	<pre>
+		<h2>
+			------------------
+			СВОДНОЕ ПРИЛОЖЕНИЕ
+			------------------
+		</h2>
+
+			Как сделать типовые задачи в web приложении на React JS: (это для резюме условно, для наработки практики, выложить на гитхаб пэйджес)
+			- https://habr.com/ru/post/346584/ (ознакомительная статья)
+			- https://avrylkov.github.io/react/ (пример для "потыканья")
+			- https://github.com/avrylkov/react (исходники "примера для потыканья")
+	</pre>
 	<hr />
 
 

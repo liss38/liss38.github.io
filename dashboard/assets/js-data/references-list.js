@@ -583,6 +583,270 @@ const referencesList = {
 		},
 
 		{
+			id: `49`,
+			link: `https://use-web.ru/testpractice.php?action=js`,
+			title: `ТЕСТ ПО JAVASCRIPT`,
+			info: {
+				theme: `Тестирование`,
+				author: ``,
+				duration: ``,
+				description: ``,
+			},
+		},
+
+		{
+			id: `50`,
+			link: `https://geekbrains.ru/tests/21`,
+			title: `Тест по JavaScript. Начальный уровень`,
+			info: {
+				theme: `Тестирование`,
+				author: `geekbrains`,
+				duration: ``,
+				description: ``,
+			},
+		},
+
+		{
+			id: `51`,
+			link: `https://geekbrains.ru/tests/174`,
+			title: `Тест по JavaScript. Средний уровень`,
+			info: {
+				theme: `Тестирование`,
+				author: `geekbrains`,
+				duration: ``,
+				description: ``,
+			},
+		},
+
+		{
+			id: `52`,
+			link: `https://geekbrains.ru/tests/15`,
+			title: `Тест по JavaScript. Сложный уровень`,
+			info: {
+				theme: `Тестирование`,
+				author: `geekbrains`,
+				duration: ``,
+				description: ``,
+			},
+		},
+
+		{
+			id: `53`,
+			link: `https://geekbrains.ru/tests/35`,
+			title: `Тест по JavaScript. Спортивный тест`,
+			info: {
+				theme: `Тестирование`,
+				author: `geekbrains`,
+				duration: ``,
+				description: ``,
+			},
+		},
+
+		{
+			id: `54`,
+			link: `http://perfectionkills.com/javascript-quiz/`,
+			title: `Javascript quiz`,
+			info: {
+				theme: `Тестирование`,
+				author: `Perfection Kills`,
+				duration: ``,
+				description: ``,
+			},
+		},
+
+		{
+			id: `55`,
+			link: `https://learn.javascript.ru/quiz`,
+			title: `Тестирование знаний`,
+			info: {
+				theme: `Тестирование`,
+				author: `learn.javascript.ru`,
+				duration: ``,
+				description: ``,
+			},
+		},
+
+		{
+			id: `56`,
+			link: `https://maxpfrontend.ru/perevody/samye-vazhnye-uroki-posle-goda-raboty-s-react/`,
+			title: `Самые важные уроки после года работы с React`,
+			info: {
+				theme: `React опыт`,
+				author: `maxpfrontend`,
+				duration: ``,
+				description: ``,
+			},
+		},
+
+		{
+			id: `?`,
+			link: ``,
+			title: ``,
+			info: {
+				theme: ``,
+				author: ``,
+				duration: ``,
+				description: ``,
+			},
+		},
+
+		{
+			id: `?`,
+			link: ``,
+			title: ``,
+			info: {
+				theme: ``,
+				author: ``,
+				duration: ``,
+				description: ``,
+			},
+		},
+
+		{
+			id: `?`,
+			link: ``,
+			title: ``,
+			info: {
+				theme: ``,
+				author: ``,
+				duration: ``,
+				description: ``,
+			},
+		},
+
+		{
+			id: `?`,
+			link: ``,
+			title: ``,
+			info: {
+				theme: ``,
+				author: ``,
+				duration: ``,
+				description: ``,
+			},
+		},
+
+		{
+			id: `?`,
+			link: ``,
+			title: ``,
+			info: {
+				theme: ``,
+				author: ``,
+				duration: ``,
+				description: ``,
+			},
+		},
+
+		{
+			id: `?`,
+			link: ``,
+			title: ``,
+			info: {
+				theme: ``,
+				author: ``,
+				duration: ``,
+				description: ``,
+			},
+		},
+
+		{
+			id: `?`,
+			link: ``,
+			title: ``,
+			info: {
+				theme: ``,
+				author: ``,
+				duration: ``,
+				description: ``,
+			},
+		},
+
+		{
+			id: `?`,
+			link: ``,
+			title: ``,
+			info: {
+				theme: ``,
+				author: ``,
+				duration: ``,
+				description: ``,
+			},
+		},
+
+		{
+			id: `?`,
+			link: ``,
+			title: ``,
+			info: {
+				theme: ``,
+				author: ``,
+				duration: ``,
+				description: ``,
+			},
+		},
+
+		{
+			id: `?`,
+			link: ``,
+			title: ``,
+			info: {
+				theme: ``,
+				author: ``,
+				duration: ``,
+				description: ``,
+			},
+		},
+
+		{
+			id: `?`,
+			link: ``,
+			title: ``,
+			info: {
+				theme: ``,
+				author: ``,
+				duration: ``,
+				description: ``,
+			},
+		},
+
+		{
+			id: `?`,
+			link: ``,
+			title: ``,
+			info: {
+				theme: ``,
+				author: ``,
+				duration: ``,
+				description: ``,
+			},
+		},
+
+		{
+			id: `?`,
+			link: ``,
+			title: ``,
+			info: {
+				theme: ``,
+				author: ``,
+				duration: ``,
+				description: ``,
+			},
+		},
+
+		{
+			id: `?`,
+			link: ``,
+			title: ``,
+			info: {
+				theme: ``,
+				author: ``,
+				duration: ``,
+				description: ``,
+			},
+		},
+
+		{
 			id: `?`,
 			link: ``,
 			title: ``,
