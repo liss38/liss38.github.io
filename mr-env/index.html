@@ -8,5 +8,164 @@
 	<pre>
 		брать <a href="https://github.com/liss38/mr" target="_blank">отсюда</a>
 	</pre>
+
+	<h1>@TODO: оформить чеклист</h1>
+
+	<pre>
+		klfImpRepDataTableOptions: computed('i18n.locale', function () {
+		    return DataSetTableOptions.create({
+		      columns: [
+		        DataSetTableColumnIcon.create({id: "iconName", label: '', visible: true}),
+		        DataSetTableColumn.create({id: "oisTypeName", label: this.i18n.t('runReportHeader.grid.oisTypeName'), type: "string", size: "9%", }),
+		        DataSetTableColumn.create({id: "klfOisName", label: this.i18n.t('runReportHeader.grid.oisName'), type: "string", size: "17%" }),
+		        DataSetTableColumn.create({id: "klfCustomerName", label: this.i18n.t('runReportHeader.grid.customer'), type: "string", size: "17%" }),
+		        DataSetTableColumn.create({id: "shareTypeName", label: this.i18n.t('runReportHeader.grid.shareTypeName'), type: "string", size: "10%" }),
+		        DataSetTableColumn.create({id: "klfRightOptionsName", label: this.i18n.t('runReportHeader.grid.rightOption'), type: "string", size: "10%" }),
+		        DataSetTableColumn.create({id: "klfRightTypeName", label: this.i18n.t('runReportHeader.grid.rightType'), type: "string", size: "17%" }),
+		        DataSetTableColumn.create({id: "playCount", label: this.i18n.t('runReportHeader.grid.playCount'), type: "string", size: "10%" }),
+		        DataSetTableColumn.create({id: "playSum", label: this.i18n.t('runReportHeader.grid.playSum'), type: "string", size: "10%" })
+		      ],
+		      events: DataSetTableEvents.create({
+		        onRowDoubleClick: (repData) => {
+		          this.transitionToRoute('klf-imp-rep-data', repData.get("dataItem"));
+		        }
+		      })
+		    });
+		  }),
+
+
+
+
+
+
+		import { debug, error } from 'media-rights/utils/debug';
+		import { scheduleOnce } from '@ember/runloop';
+		import BaseController from 'media-rights/controllers/base';
+		import BusinessObjGrants from 'media-rights/mixins/business-obj-grants';
+		import DataSetTableOptions from "media-rights/utils/classes/app/dataset-table/options";
+		import DataSetTableEvents from "media-rights/utils/classes/app/dataset-table/events"; // события
+		import DataSetTableColumn from "media-rights/utils/classes/app/dataset-table/column"; // колонки
+		import DataSetTableSummary from "media-rights/utils/classes/app/dataset-table/summary";
+		import DataSetTableColumnIcon from "media-rights/utils/classes/app/dataset-table/column-icon";
+		import FormEdit from 'media-rights/controllers/form-edit';
+		import ModelSave from 'media-rights/mixins/model-save';
+		import ShortCutPanelButtons from 'media-rights/mixins/shortcut-panel-buttons';
+		import Validation from 'media-rights/mixins/validation';
+		import EmberObject, { computed, observer } from '@ember/object';
+		import { inject as service } from '@ember/service';
+		import { isEmpty } from '@ember/utils';
+
+
+
+
+
+
+
+
+
+
+
+
+		C:\mr2\media-rights\app\pods\components\application-sidebar\component.js:
+
+
+
+
+
+
+
+
+
+
+
+
+		(типовые интерфейсы и функционал) варианты в справочниках  /list и /details
+
+
+		БКК (большая красная кнопка)
+
+
+
+
+
+
+		Разобрать вот эту штуку (она в route.js, относится к shortCutPanel, сохранение/адыление/назад)
+
+		actionData: computed('currentController.model.id', function () {
+		  return EmberObject.create({
+		      'save': {
+		        'successMessage': 'KlfFstFileExtSets.saveSuccess',
+		        'transitionOnSuccess': {
+		          path: 'klf-fst-file-ext-set/detail',
+		          param: this.get('currentController.model.id')
+		        },
+		        'transitionOnError': {
+		          path: 'klf-ois-release-types/detail'
+		        }
+		      },
+		      'del': {
+		        'confirmationMessage': 'KlfFstFileExtSets.delete.confirmation',
+		        'transitionOnSuccess': {
+		          'path': 'klf-ois-release-types/list'
+		        }
+		      },
+		      'close': {
+		        'transition': {
+		          'path': 'klf-ois-release-types/list'
+		        }
+		      }
+		    }
+		  );
+		})
+
+
+
+
+		Ещё это export default AuthenticatedRoute.extend (сделать перечень свойств и методово этого раута, )
+
+
+
+		@mixins, сделать список используемых миксинов
+
+
+
+
+
+
+
+
+
+
+		import { debug, error } from 'media-rights/utils/debug';
+		import EmberObject, { computed, observer } from '@ember/object';
+		import { inject as controller } from '@ember/controller';
+		import { inject as service } from '@ember/service';
+		import { isEmpty } from '@ember/utils';
+
+		import FormEdit from 'media-rights/controllers/form-edit';
+		import DataSetTableOptions from "media-rights/utils/classes/app/dataset-table/options";
+		import DataSetTableEvents from 'media-rights/utils/classes/app/dataset-table/events'; // события
+		import DataSetTableColumn from "media-rights/utils/classes/app/dataset-table/column";
+		import DataSetTableColumnSelected from "media-rights/utils/classes/app/dataset-table/column-selected";
+		import DataSetTableColumnSelectInput from "media-rights/utils/classes/app/dataset-table/column-select-input";
+
+		import SendAlert from "media-rights/mixins/send-alert";
+		import Pagination from 'media-rights/mixins/pagination';
+		import ShortCutPanelButtons from 'media-rights/mixins/shortcut-panel-buttons';
+		import ModelSave from 'media-rights/mixins/model-save';
+		import Validation from 'media-rights/mixins/validation';
+
+
+
+
+
+
+
+
+
+
+
+		Вот это посмотреть C:\mr2\media-rights\app\services\routes\routes-tree.js:
+	</pre>
 </body>
 </html>
