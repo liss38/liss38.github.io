@@ -1062,16 +1062,87 @@ const referencesList = {
 			},
 		},
 
+		{
+			id: `89`,
+			link: `https://www.youtube.com/watch?v=1oCfm4jJskM&feature=youtu.be`,
+			title: `Functional setState in React`,
+			info: {
+				theme: `Евгений Подгаецкий ReactWarriors`,
+				author: `Евгений Подгаецкий`,
+				duration: `00:15:51`,
+				description: `Евгений Подгаецкий ReactWarriors`,
+			},
+		},
 
 		{
-			id: `?`,
-			link: ``,
-			title: ``,
+			id: `90`,
+			link: `https://www.youtube.com/watch?v=aZUPg72836Q&feature=youtu.be`,
+			title: `Cессия вопрос-ответ по ReactJS`,
 			info: {
-				theme: ``,
-				author: ``,
+				theme: `Евгений Подгаецкий ReactWarriors`,
+				author: `Евгений Подгаецкий`,
+				duration: `00:54:58`,
+				description: `Евгений Подгаецкий ReactWarriors`,
+			},
+		},
+
+		{
+			id: `91`,
+			link: `https://www.youtube.com/watch?v=zmeikL50bFc&feature=youtu.be`,
+			title: `Типичное тестовое задание на React разработчика уровень Basic`,
+			info: {
+				theme: `Евгений Подгаецкий ReactWarriors`,
+				author: `Евгений Подгаецкий`,
+				duration: `01:52:07`,
+				description: `Евгений Подгаецкий ReactWarriors`,
+			},
+		},
+
+		{
+			id: `92`,
+			link: `https://www.youtube.com/playlist?list=PL5m6RnG9Ag1OlUur6A-wC7WqQPYikWSeU`,
+			title: `Подготовка к первому тестовому заданию по ReactJS (playlist)`,
+			info: {
+				theme: `Евгений Подгаецкий ReactWarriors`,
+				author: `Евгений Подгаецкий`,
+				duration: `~6часов`,
+				description: `Евгений Подгаецкий ReactWarriors`,
+			},
+		},
+
+		{
+			id: `93`,
+			link: `https://www.youtube.com/channel/UCRg65LqsQqqbBWY2XCOXujQ`,
+			title: `ReactWarriors  (ссылка на канал)`,
+			info: {
+				theme: `Евгений Подгаецкий ReactWarriors`,
+				author: `Евгений Подгаецкий`,
 				duration: ``,
-				description: ``,
+				description: `Евгений Подгаецкий ReactWarriors`,
+			},
+		},
+
+		{
+			id: `94`,
+			link: `https://www.youtube.com/watch?v=hqh2SAESj3w&feature=youtu.be`,
+			title: `Курс по React JS | Как оптимизировать компонент  Select. Как разделять функции.`,
+			info: {
+				theme: `Евгений Подгаецкий ReactWarriors`,
+				author: `Евгений Подгаецкий`,
+				duration: `00:09:13`,
+				description: `Евгений Подгаецкий ReactWarriors`,
+			},
+		},
+
+		{
+			id: `95`,
+			link: `https://www.youtube.com/watch?v=LkuPhT89IEE&feature=youtu.be`,
+			title: `Курс по React JS | Стрелочные функции в компоненте. Как избежать утечек памяти в рендере компонента`,
+			info: {
+				theme: `Евгений Подгаецкий ReactWarriors`,
+				author: `Евгений Подгаецкий`,
+				duration: `00:04:59`,
+				description: `Евгений Подгаецкий ReactWarriors`,
 			},
 		},
 

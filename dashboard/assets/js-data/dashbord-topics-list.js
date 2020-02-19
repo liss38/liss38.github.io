@@ -51,5 +51,13 @@ const dashbordTopicsList = {
 		description: ``,
 		footer: ``,
 	},
+
+
+	'react-warriors-com': {
+		header: `Евгений Подгаецкий`,
+		searchKey: `Евгений Подгаецкий ReactWarriors`,
+		description: `Евгений Подгаецкий ReactWarriors`,
+		footer: ``,
+	},
 };
 
