@@ -3,8 +3,26 @@
 <head>
 	<meta charset="UTF-8">
 	<title>MR help</title>
+
+	<!-- https://highlightjs.org/ , подсветка кода-->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/default.min.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js"></script>
+	<script>hljs.initHighlightingOnLoad();</script>
+
+
+	<link rel="stylesheet" href="index.css">
 </head>
 <body>
+	<div class="content-navi">
+		<ul>
+			<li><a href="#content-section--panel-filter">@filter добавление фильтра(функциональный компонент</a></li>
+			<li><a href="#content-section--imports">imports (примеры всевозможных импортов)</a></li>
+			<li><a href="#"></a></li>
+		</ul>
+	</div>
+
+	<hr />
+
 	<pre>
 		брать <a href="https://github.com/liss38/mr" target="_blank">отсюда</a>
 	</pre>
@@ -37,44 +55,7 @@
 
 
 
-
-		import { debug, error } from 'media-rights/utils/debug';
-		import { scheduleOnce } from '@ember/runloop';
-		import BaseController from 'media-rights/controllers/base';
-		import BusinessObjGrants from 'media-rights/mixins/business-obj-grants';
-		import DataSetTableOptions from "media-rights/utils/classes/app/dataset-table/options";
-		import DataSetTableEvents from "media-rights/utils/classes/app/dataset-table/events"; // события
-		import DataSetTableColumn from "media-rights/utils/classes/app/dataset-table/column"; // колонки
-		import DataSetTableSummary from "media-rights/utils/classes/app/dataset-table/summary";
-		import DataSetTableColumnIcon from "media-rights/utils/classes/app/dataset-table/column-icon";
-		import FormEdit from 'media-rights/controllers/form-edit';
-		import ModelSave from 'media-rights/mixins/model-save';
-		import ShortCutPanelButtons from 'media-rights/mixins/shortcut-panel-buttons';
-		import Validation from 'media-rights/mixins/validation';
-		import EmberObject, { computed, observer } from '@ember/object';
-		import { inject as service } from '@ember/service';
-		import { isEmpty } from '@ember/utils';
-
-
-
-
-
-
-
-
-
-
-
-
 		C:\mr2\media-rights\app\pods\components\application-sidebar\component.js:
-
-
-
-
-
-
-
-
 
 
 
@@ -83,9 +64,6 @@
 
 
 		БКК (большая красная кнопка)
-
-
-
 
 
 
@@ -129,43 +107,121 @@
 
 
 
-
-
-
-
-
-
-
-		import { debug, error } from 'media-rights/utils/debug';
-		import EmberObject, { computed, observer } from '@ember/object';
-		import { inject as controller } from '@ember/controller';
-		import { inject as service } from '@ember/service';
-		import { isEmpty } from '@ember/utils';
-
-		import FormEdit from 'media-rights/controllers/form-edit';
-		import DataSetTableOptions from "media-rights/utils/classes/app/dataset-table/options";
-		import DataSetTableEvents from 'media-rights/utils/classes/app/dataset-table/events'; // события
-		import DataSetTableColumn from "media-rights/utils/classes/app/dataset-table/column";
-		import DataSetTableColumnSelected from "media-rights/utils/classes/app/dataset-table/column-selected";
-		import DataSetTableColumnSelectInput from "media-rights/utils/classes/app/dataset-table/column-select-input";
-
-		import SendAlert from "media-rights/mixins/send-alert";
-		import Pagination from 'media-rights/mixins/pagination';
-		import ShortCutPanelButtons from 'media-rights/mixins/shortcut-panel-buttons';
-		import ModelSave from 'media-rights/mixins/model-save';
-		import Validation from 'media-rights/mixins/validation';
-
-
-
-
-
-
-
-
-
-
-
 		Вот это посмотреть C:\mr2\media-rights\app\services\routes\routes-tree.js:
+
+
+
+
+		http://localhost:8085/ois/2156702/rights
+		http://localhost:8085/api/vwRightsFlow/searchCalculatedRightsTree?begDate=2020-02-17&endDate=2020-02-17&idOis=2156702&idOrgTree=16&withChildren=1&lang=ru
+
+
+
+		http://localhost:8085/right-type-details?begDate=2020-02-17&endDate=2021-02-17&ois=2156702&org=16&rightType=48223&withChildren=1
+		http://localhost:8085/api/vwRightsFlow/searchCalculatedOptionsTree?begDate=2020-02-17&endDate=2021-02-17&idOis=2156702&idOrgTree=16&idRightType=5061&withChildren=1&lang=ru
+
+		
 	</pre>
+
+
+
+	<div id="content-section--imports" class="content-section">
+		<h3 class="content-section__heading">imports (примеры всевозможных импортов)</h3>
+
+		<div class="content-block">
+			<pre><code class="javascript hljs">
+				import { debug, error } from 'media-rights/utils/debug';
+				import EmberObject, { computed, observer } from '@ember/object';
+				import { inject as controller } from '@ember/controller';
+				import { inject as service } from '@ember/service';
+				import { isEmpty } from '@ember/utils';
+
+				import FormEdit from 'media-rights/controllers/form-edit';
+				import DataSetTableOptions from "media-rights/utils/classes/app/dataset-table/options";
+				import DataSetTableEvents from 'media-rights/utils/classes/app/dataset-table/events'; // события
+				import DataSetTableColumn from "media-rights/utils/classes/app/dataset-table/column";
+				import DataSetTableColumnSelected from "media-rights/utils/classes/app/dataset-table/column-selected";
+				import DataSetTableColumnSelectInput from "media-rights/utils/classes/app/dataset-table/column-select-input";
+
+				import SendAlert from "media-rights/mixins/send-alert";
+				import Pagination from 'media-rights/mixins/pagination';
+				import ShortCutPanelButtons from 'media-rights/mixins/shortcut-panel-buttons';
+				import ModelSave from 'media-rights/mixins/model-save';
+				import Validation from 'media-rights/mixins/validation';
+
+				import { debug, error } from 'media-rights/utils/debug';
+				import { scheduleOnce } from '@ember/runloop';
+				import BaseController from 'media-rights/controllers/base';
+				import BusinessObjGrants from 'media-rights/mixins/business-obj-grants';
+				import DataSetTableOptions from "media-rights/utils/classes/app/dataset-table/options";
+				import DataSetTableEvents from "media-rights/utils/classes/app/dataset-table/events"; // события
+				import DataSetTableColumn from "media-rights/utils/classes/app/dataset-table/column"; // колонки
+				import DataSetTableSummary from "media-rights/utils/classes/app/dataset-table/summary";
+				import DataSetTableColumnIcon from "media-rights/utils/classes/app/dataset-table/column-icon";
+				import FormEdit from 'media-rights/controllers/form-edit';
+				import ModelSave from 'media-rights/mixins/model-save';
+				import ShortCutPanelButtons from 'media-rights/mixins/shortcut-panel-buttons';
+				import Validation from 'media-rights/mixins/validation';
+				import EmberObject, { computed, observer } from '@ember/object';
+				import { inject as service } from '@ember/service';
+				import { isEmpty } from '@ember/utils';
+			</code></pre>
+		</div>
+	</div>
+
+
+	<div id="content-section--panel-filter" class="content-section">
+		<h3 class="content-section__heading">@filter добавление фильтра(функциональный компонент)</h3>
+
+		<div class="content-block">
+			<h4>template.hbs</h4>
+			<pre><code class="javascript hljs">
+				{{#panel/panel-filter}}
+				  {{input/tmpl/text-input
+				    inputId='filter'
+				    inputTitle=(t 'filter')
+				    inputValue=licenseFilter
+				    updateGrant=1}}
+				{{/panel/panel-filter}}
+
+			 // добавлять внутрь {{#panel/panel-aside}} когда используется в гриде
+			</code></pre>
+		</div>
+
+		<div class="content-block">
+			<h4>controller.js</h4>
+			<pre><code class="javascript hljs">
+				licenseFilter: null,
+
+				onLicenseFilter: observer('licenseFilter', function () {
+				  this.send("reloadLicenses");
+				}),
+			</code></pre>
+		</div>
+
+		<div class="content-block">
+			<h4>route.js</h4>
+			<pre><code class="javascript hljs">
+				reloadLicenses: function(controller, model, id) {
+				  let params = this.paramsFor(this.routeName);
+				  params.idDeal = model.id;
+				  params.filter = controller.licenseFilter;
+				  if (params.idDeal != null) {
+				    this.store.query('license', params).then(
+				      function (licenses) {
+				        controller.set(`licensesSelected`, []);
+				        controller.set('licenses', licenses);
+				        controller.set('totalPages', licenses.meta.page.totalPages);
+				        if (!isEmpty(id) && id != -1) controller.selectLicenseById(id);
+				      });
+				  }
+				  else {
+				    controller.set('licenses', null);
+				    controller.set('totalPages', 0);
+				  }
+				},
+			</code></pre>
+		</div>
+	</div>
 </body>
 </html>
