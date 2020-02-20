@@ -39,8 +39,8 @@
 		
 		<!-- navi -->
 		<div class="navi-panel">
-			<nav class="main-navi">
-				<ul class="main-navi__list">
+			<nav id="main-navi" class="main-navi">
+				<ul class="main-navi__list  js-nav-list">
 					<li class="main-navi__item"><a href="#index" class="main-navi__link">Main</a></li>
 					<li class="main-navi__item"><a href="#frontend-map-2020" class="main-navi__link">2020 frontendmap</a></li>
 					<li class="main-navi__item"><a href="#react-roadmap" class="main-navi__link">react roadmap</a></li>
@@ -59,8 +59,8 @@
 
 	<main class="page__main">
 		<!-- index page -->
-		<div id="index" class="page-item">
-			#block today-learning-list
+		<div id="index" class="page-item  page-item--active">
+			#block today-learning-list fdgdfg
 		</div>
 
 		<!-- dashboard page -->
@@ -145,12 +145,18 @@
 
 
 <hr />
+<hr />
+<hr />
+<hr />
+<hr />
+<hr />
+<hr />
 
 
 	<pre>
-		--------------------------------------
-		# ЛАЙВКОДИНГИ  "ПРАКТИКУС-РУКОЖОПИКУС"
-		-------------------------------------
+		-------------
+		# ЛАЙВКОДИНГИ
+		-------------
 
 		(1) Цепочка кирпичиков #1 по NodeJS:
 		      | 
@@ -190,16 +196,16 @@
 
 
 		-------
-		# КУРСЫ ("Трейдерство", локальность, импровизация, текущий рынок)
+		# КУРСЫ
 		-------
 		(1) https://www.youtube.com/watch?v=nyIpDs2DJ_c
 		    TypeScript - Полный Курс. Уроки TypeScript  (Владилен Минин, 01:07:59)
 
 
 
-		---------
-		# "БАЛАНДА"  (База, гранит, фундамент, основа, "Инвестирование", Навсегда, глубоко, внутри, неизменно, Обязаловка, Протеин, Белок)
-		---------
+		--------
+		# "BASE"
+		--------
 
 		(1) Баланда про JavaScript
 		    https://www.youtube.com/watch?v=aQkgUUmUJy4&list=PLqKQF2ojwm3l4oPjsB9chrJmlhZ-zOzWT
@@ -242,12 +248,20 @@
 		<li class="done">------------------- JS runtime (EventLoop)</li>
 		<li class="done">---------- 10, 20, 30, ... всяких шняг и приблуд, которые ты должен знать и без которых ты - лох и гавно галимое и бугага</li>
 		<li class="done">--------- Хочу стать .. , программы обучений, карты знаний</li>
+		<li class="done">Роутинг, фильтр/навигация: продумать группировку и что там будет отображаться</li>
+		<li>Сделать содержимое страницы main по эскизу</li>
+		<li>Сделать стили и внешний вид страницы main по эскизу</li>
+		<li class="stage">"причесать" дизайн, попытка #3 (стили для навигации)</li>
+
+
 		<li>--------- Пути и истории, стратегии, чему я научился и где я ошибся, рекомендации и советы((Учись у других))</li>
 		<li>------------------- Frontend: JavaScript, Browser</li>
 		<li>----------- Руководства для самых маленьких и начинающих и новичков и другие введения и знакомтсва</li>
 		<li>Удалить references.html</li>
 		<li>Сделать SourcesList</li>
-		<li class="stage">"причесать" дизайн, попытка #3</li>
+		<li class="stage">"причесать" дизайн, попытка #5</li>
+
+
 
 
 		<li>Описать план, метафору, темы для блока "БАЛАНДА"</li>
@@ -261,8 +275,7 @@
 		<li class="stage">"причесать" дизайн, попытка #4</li>
 
 		
-		<li>Роутинг, фильтр/навигация: продумать группировку и что там будет отображаться</li>
-		<li class="stage">"причесать" дизайн, попытка #5</li>
+		
 
 
 		<li class="stage">"причесать" дизайн, попытка #6</li>
@@ -281,11 +294,14 @@
 
 <h2><a href="references.html" target="_blank">references.html</a></h2>
 	
-	
+	<!-- DATA -->
 	<script src="assets/js-data/references-list.js"></script>
 	<script src="assets/js-data/dashbord-topics-list.js"></script>
 	<script src="assets/js-data/sources-list.js"></script>
+
+	<!-- APP -->
 	<script src="assets/js/utils.js"></script>
+	<script src="assets/js/main-navi.js"></script>
 	<script src="app.js"></script>
 </body>
 </html>
