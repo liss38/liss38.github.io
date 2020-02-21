@@ -205,7 +205,7 @@
 				reloadLicenses: function(controller, model, id) {
 				  let params = this.paramsFor(this.routeName);
 				  params.idDeal = model.id;
-				  params.filter = controller.licenseFilter;
+				  <b style="border: 1px dotted red; font-weight: 900; padding: 3px; ">(!) params.filter = controller.licenseFilter;</b>
 				  if (params.idDeal != null) {
 				    this.store.query('license', params).then(
 				      function (licenses) {
