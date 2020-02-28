@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Карта интерфейса</title>
+</head>
+<body>
+<pre>
+	(1)
+	pods/components/pods/fee-plan/template.hbs
+	
+	http://localhost:8085/fee-plan/138513
+	
+	# План формирования задолженности(rytFeePlan.title)
+		форма с полями
+
+	# Способы использования(rytFeePlan.edit.rightTypesGrid.title)
+		грид/таблица
+
+	# Распределение задолженности(rytFeePlan.edit.allocationsGrid.title)
+		грид/таблица
+
+
+(2)	КАРТОЧКА СДЕЛКИ
+	http://localhost:8085/deal/69022/licenses
+	pods/deal/licenses/template.hbs
+
+	Лицензии
+	Акты
+	Дополнительные соглашения
+	Присоединенные документы
+	Отчеты
+	Прочее
+
+(3) СПИСОК ВНЕШНИХ СДЕЛОК
+	http://localhost:8085/deals-external
+
+
+(4) ЗАГРУЗКА ДАННЫХ
+	http://localhost:8085/import-data
+
+	this.route('import-data');
+	this.route('import-data/header', {path: '/import-detail/:id'}, function () {
+	  this.route('details', {path: '/details'});
+	});
+
+	pods/import-data/header/details/is-waitrecon/template.hbs
+
+
+(5) РАСЧЕТ ЗАДОЛЖЕНОСТИ
+	http://localhost:8085/jobs
+
+(6) ВХОДИЩИЕ ОТЧЕТЫ ОБ ИСПОЛЬЗОВАНИИ
+	pods/klf-imp-rep-header/list/template.hbs
+	http://localhost:8085/run-reports
+
+</pre>
+</body>
+</html>

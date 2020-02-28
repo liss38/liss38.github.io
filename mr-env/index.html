@@ -14,10 +14,15 @@
 </head>
 <body>
 	<div class="content-navi">
-		<ul>
-			<li><a href="#content-section--panel-filter">@filter добавление фильтра(функциональный компонент</a></li>
-			<li><a href="#content-section--imports">imports (примеры всевозможных импортов)</a></li>
-			<li><a href="#"></a></li>
+		<ul class="content-navi__list">
+			<li class="content-navi__item"><a class="content-navi__link" href="#content-section--panel-filter">@filter добавление фильтра(функциональный компонент</a></li>
+			<li class="content-navi__item"><a class="content-navi__link" href="#content-section--imports">imports (примеры всевозможных импортов)</a></li>
+			<li class="content-navi__item"><a class="content-navi__link" href="#content-section--todo-checklist">@TODO: чеклист задач и улучшений</a></li>
+			<li class="content-navi__item"><a class="content-navi__link" href="#content-section--grid-setting">@grid-settings "Настройки таблицы"</a></li>
+			<li class="content-navi__item"><a class="content-navi__link" href="#content-section--"></a></li>
+			<li class="content-navi__item"><a class="content-navi__link" href="#content-section--"></a></li>
+			<li class="content-navi__item"><a class="content-navi__link" href="#content-section--"></a></li>
+			<li class="content-navi__item"><a class="content-navi__link" href="#content-section--"></a></li>
 		</ul>
 	</div>
 
@@ -27,7 +32,761 @@
 		брать <a href="https://github.com/liss38/mr" target="_blank">отсюда</a>
 	</pre>
 
-	<h1>@TODO: оформить чеклист</h1>
+
+
+
+	<div id="content-section--todo-checklist" class="content-section">
+		<h3 class="content-section__heading">@TODO: чеклист задач и улучшений</h3>
+
+		<div class="content-block">
+			<ol>
+				<li> --- Для <b>@grid-settings "Настройки таблицы"</b> в контент-секции сделать "вкусно"  </li>
+				<li>содержимое папки `/modals`</li>
+				<li>Layout: компоненты/стили сетки</li>
+				<li>Buttons: виды кнопок (внешний вид, какие стили есть), параметры, которые пердеаются в компонент кнопки(какие есть, описание)</li>
+				<li>Дерево ссылок навигации (основные ссылки)</li>
+				<li>Наиболее популярные страницы (для тестирования, просмотра, использования)</li>
+			</ol>
+		</div>
+	</div>
+
+
+
+	
+
+	<div id="content-section--grid-setting" class="content-section">
+		<h3 class="content-section__heading">@grid-settings "Настройки таблицы"</h3>
+
+		<div class="content-block  content-block--intro">
+			<h4>@grid-settings "Настройки таблицы"</h4>
+			<p>механизм управления отображением столбцов и их последовательностью в гриде</p>
+			<p>Состоит из:</p>
+			<ul>
+				<li>Пример подключения фичи</li>
+				<li>(Описание) Компонента `{{grid-settings/layout ...}}`</li>
+				<li>(Описание) Набора имксинов `media-rights/mixins/grid-settings/{component.js, controller.js, route.js}`</li>
+			</ul>
+			
+		</div>
+
+		<div class="content-block">
+			<h4>Пример подключения</h4>
+
+			<h4>template.hbs</h4>
+			<pre><code class="javascript hljs">
+				{{#panel/panel-header}}
+				    {{#panel/panel-title}}
+				        {{t 'license.finances.paymentsGrid.title'}}
+				    {{/panel/panel-title}}
+				    {{#panel/panel-aside}}
+				        {{#panel/tmpl/dropdown-panel dropdownTitle=(t 'grid.button.actions')}}
+				            {{#if rytFeePaymentGridMenuMode}}
+				                
+				                ... кнопка "Настройка таюлицы"
+				                <b style="background-color: #000">
+				                {{#button/button-item
+				                    buttonTitle=(t 'gridSettings.title')
+				                    buttonMode='menu-item'
+				                    buttonGrant=1
+				                    onClick=(action 'setGridSettings' 'rytFeePayment')}}
+				                    {{t 'gridSettings.title'}}
+				                {{/button/button-item}}
+				            	</b>
+								
+								... какие-то другие кнопки этого меню
+				            {{else}}
+				            {{!-- Меню "Настройка таблицы" --}}
+				                {{grid-settings/layout
+				                    mixerTitle=(t 'gridSettings.fieldsList')
+				                    idDatasetTable='rytFeePayment'
+				                    mixerData=rytFeePaymentTableOptions.columns
+				                    onChangeVisibleColumns=(action 'saveLayoutSettings' constants.gridSettings.rytFeePaymentInCustomer 'rytFeePaymentTableOptions' 'rytFeePayment')
+				                    onChangeColumnsOrder=(action 'saveLayoutSettings' constants.gridSettings.rytFeePaymentInCustomer 'rytFeePaymentTableOptions' 'rytFeePayment')}}
+				                {{!-- Кнопка "Назад" --}}
+				                {{#button/button-item
+				                    buttonTitle=(t 'button.back')
+				                    buttonMode='menu-item'
+				                    buttonGrant=1
+				                    onClick=(action 'setGridSettings' 'rytFeePayment') }}
+				                    {{t 'button.back'}}
+				                {{/button/button-item}}
+				            {{/if}}
+				        {{/panel/tmpl/dropdown-panel}}
+				    {{/panel/panel-aside}}
+				{{/panel/panel-header}}
+			</code></pre>
+
+
+			<h4>controller.js</h4>
+			
+			<p>подключение миксина настроек столбцов таблицы</p>
+			<pre><code class="javascript hljs">
+				import GridSettings from 'media-rights/mixins/grid-settings/controller';
+
+				export default BaseController.extend(SendAlert, GridSettings, {
+				 ...
+			</code></pre>
+
+
+			<p>управление переключением подменю "Настройки таблицы"</p>
+			<pre><code class="javascript hljs">
+				// 
+				rytFeePaymentGridMenuMode: true,
+				rytFeeGridMenuMode: true,
+
+				....
+
+
+				//
+				actions: {
+					setGridSettings(tableName) {
+					  this.toggleProperty(`${tableName}GridMenuMode`);
+					},
+
+					....
+			</code></pre>
+		</div>
+
+		<div class="content-block">
+			<h4>Миксины  `media-rights/mixins/grid-settings/{component.js, controller.js, route.js}`</h4>
+
+
+			<h4>media-rights/mixins/grid-settings/component.js</h4>
+			<pre><code class="javascript hljs">
+				import Mixin from '@ember/object/mixin';
+				import { inject as service } from '@ember/service';
+				import { isEmpty } from '@ember/utils';
+
+				export default Mixin.create({
+				  store: service('store'),
+
+				  loadGridLayout(gridId, tableOptionsName, controllerGridSettingsName) {
+				    this.store.queryPath(`klfGridSettings`, {idGrid: gridId}, 'byGrid').then(
+				      (gsettings) => {
+				        let gridSettings = gsettings.objectAt(0);
+				        if(!isEmpty(gridSettings)) {
+				          let colSettings = gridSettings.get("colSettings");
+				          if(!isEmpty(colSettings)) {
+				            colSettings = JSON.parse(gridSettings.get("colSettings"));
+				            let columns = colSettings.columns == null ? colSettings : colSettings.columns;
+				            let groupNames = colSettings.groupNames ? colSettings.groupNames : [];
+				            let newFields = [];
+				            let i = 0;
+
+				            if(!isEmpty(this.get(`${tableOptionsName}.columns`))) {
+				              this.get(`${tableOptionsName}.columns`).forEach(
+				                (field) => {
+				                  let c = columns.findBy('name', field.get("id"));
+				                  if (c && c.show !== 'undefined' && c.show !== null) {
+				                    field.set('visible', c.show);
+				                  }
+				                  if (c && !isEmpty(c.sortOrder)) {
+				                    field.set('sortOrder', c.sortOrder);
+				                  }
+				                  else {
+				                    field.set('sortOrder', i++);
+				                  }
+				                  newFields.pushObject(field);
+				                }
+				              );
+				            }
+				            
+				            this.set(`${tableOptionsName}.columns`, newFields.sortBy("sortOrder"));
+				            this.set(`${tableOptionsName}.groupNames`, groupNames);
+				          }
+				        }
+				        else {
+				          gridSettings = this.store.createRecord('klfGridSettings', {
+				            idGrid: gridId
+				          });
+				          gridSettings.save();
+				        }
+				        this.set(controllerGridSettingsName, gridSettings);
+				      },
+				      () => {
+				        let gridSettings = this.store.createRecord('klfGridSettings', {
+				          idGrid: gridId
+				        });
+				        gridSettings.save();
+				        this.set(controllerGridSettingsName, gridSettings);
+				      }
+				    );
+				  },
+
+				  actions: {
+				    saveGridLayoutSettings(gridId, tableOptionsName, controllerGridSettingsName) {
+				      let gridSettings = this.get(controllerGridSettingsName);
+				      let columns = this.get(`${tableOptionsName}.columns`);
+				      let groupNames = this.get(`${tableOptionsName}.groupNames`);
+
+				      if(isEmpty(gridSettings)) {
+				        gridSettings = this.store.createRecord('klfGridSettings', {
+				          idGrid: gridId
+				        });
+				        this.set(controllerGridSettingsName, gridSettings);
+				      }
+				      
+				      let colSettings = {
+				        columns: [],
+				        groupNames: [],
+				      };
+				      
+				      if(!isEmpty(columns)) {
+				        columns.forEach((field) => {
+				          colSettings.columns.push({
+				            name: field.get("id"),
+				            show: field.get("visible"),
+				            sortOrder: field.get("sortOrder")
+				          });
+				        });
+				      }
+				      
+				      if(!isEmpty(groupNames)){
+				        colSettings.groupNames = groupNames;
+				      }
+				      
+				      gridSettings.set('colSettings', JSON.stringify(colSettings));
+				      gridSettings.save();
+				    },
+
+
+				  }
+				});
+			</code></pre>
+
+			
+			<h4>media-rights/mixins/grid-settings/controller.js</h4>
+			<pre><code class="javascript hljs">
+				```
+				import Mixin from '@ember/object/mixin';
+				export default Mixin.create({
+				  actions: {
+				    loadLayoutSettings(){
+				      this.send('loadGridLayoutSettings', ...arguments)
+				    },
+				    saveLayoutSettings(){
+				      this.send('saveGridLayoutSettings', ...arguments)
+				    },
+				    restoreDefaultLayout(){
+				      this.send('restoreGridDefaultLayout', ...arguments)
+				    }
+				  }
+				});
+			</code></pre>
+
+
+			<h4>media-rights/mixins/grid-settings/route.js</h4>
+			<pre><code class="javascript hljs">
+				import { debug, error } from 'media-rights/utils/debug';
+				import { isEmpty } from '@ember/utils';
+				import Mixin from '@ember/object/mixin';
+				import EmberObject, { computed } from '@ember/object';
+				import {scheduleOnce} from '@ember/runloop';
+				import { inject as service } from '@ember/service';
+				export default Mixin.create({
+				  gridHandler: service('handlers/dataset-table'),
+				  loadGridLayout (gridId, tableOptionsName, gridName) {
+				    let controllerGridSettingsName = `${gridName}GridSettings`;
+				    let controller = this.currentController;//this.controllerFor(this.routeName);
+				    let ord = 0;
+				    let defColumns = controller.get(tableOptionsName).columns
+				      .sortBy("sortOrder")
+				      .map( field => {
+				        field.set('sortOrder', ord);
+				        debug(`field ${field.id}, ${ord}`);
+				        return EmberObject.create({
+				          id: field.id,
+				          sortOrder: ord++,
+				          size: field.size,
+				          visible: field.visible
+				        });
+				      });
+				    controller.set(`${tableOptionsName}Default`, defColumns);
+				    // debug('defColumns', controller.get(`${tableOptionsName}Default`));
+				    this.store.queryPath(`klfGridSettings`, {idGrid: gridId}, 'byGrid').then(
+				      (gsettings) => {
+				        this.gridHandler.send(gridName, 'adjustColumnSizes');
+				        let gridSettings = gsettings.objectAt(0);
+				        if (gridSettings) {
+				          let colSettings = gridSettings.get("colSettings");
+				          if (!isEmpty(colSettings)) {
+				            colSettings = JSON.parse(colSettings);
+				            let columns = colSettings.columns;
+				            let groupNames = colSettings.groupNames ? colSettings.groupNames : [];
+				            let newFields = [];
+				            let i=0;
+				            controller.get(`${tableOptionsName}.columns`)
+				              .sortBy("sortOrder")
+				              .forEach(
+				              (field) => {
+				                let c = columns.findBy('name', field.get("id"));
+				                if (c && c.show !== 'undefined' && c.show !== null) {
+				                  field.set('visible', c.show);
+				                  field.set('sortOrder', c.sortOrder);
+				                }
+				                newFields.pushObject(field);
+				              }
+				            );
+				            controller.set(`${tableOptionsName}.columns`, newFields.sortBy('sortOrder'));
+				            controller.set(`${tableOptionsName}.groupNames`, groupNames);
+				          }
+				        }
+				        else {
+				          gridSettings = this.store.createRecord('klfGridSettings', {
+				            idGrid: gridId
+				          });
+				          gridSettings.save();
+				        }
+				        controller.set(controllerGridSettingsName, gridSettings);
+				      },
+				      () => {
+				        this.gridHandler.send(gridName, 'adjustColumnSizes');
+				        let gridSettings = this.store.createRecord('klfGridSettings', {
+				          idGrid: gridId
+				        });
+				        gridSettings.save();
+				        controller.set(controllerGridSettingsName, gridSettings);
+				      }
+				    );
+				  },
+				  actions: {
+				    loadGridLayoutSettings(gridId, tableOptionsName, gridName){
+				      this.loadGridLayout(gridId, tableOptionsName, gridName)
+				    },
+				    saveGridLayoutSettings: function (gridId, tableOptionsName, gridName) {
+				      let controller = this.currentController;// this.controllerFor(this.routeName);
+				      let controllerGridSettingsName = `${gridName}GridSettings`;
+				      let gridSettings = controller.get(controllerGridSettingsName);
+				      let columns = controller.get(`${tableOptionsName}.columns`);
+				      let groupNames = controller.get(`${tableOptionsName}.groupNames`);
+				      if (!gridSettings) {
+				        gridSettings = this.store.createRecord('klfGridSettings', {
+				          idGrid: gridId
+				        });
+				        controller.set(controllerGridSettingsName, gridSettings);
+				      }
+				      let colSettings = {
+				        columns: [],
+				        groupNames: [],
+				      };
+				      if (columns) {
+				        columns.forEach((field) => {
+				          colSettings.columns.push({
+				            name: field.get("id"),
+				            show: field.get("visible"),
+				            sortOrder: field.get("sortOrder")
+				          });
+				        });
+				      }
+				      if (groupNames){
+				        colSettings.groupNames = groupNames;
+				      }
+				      gridSettings.set('colSettings', JSON.stringify(colSettings));
+				      gridSettings.save();
+				    },
+				    restoreGridDefaultLayout(gridId, tableOptionsName, gridName){
+				      let controller = this.currentController;// this.controllerFor(this.routeName);
+				      let controllerGridSettingsName = `${gridName}GridSettings`;
+				      let columns = controller.get(tableOptionsName).columns;
+				      //controller.set(`${tableOptionsName}.columns`, []);
+				      controller.get(`${tableOptionsName}Default`).forEach( field => {
+				        columns.findBy('id', field.id).setProperties({
+				          sortOrder: field.sortOrder,
+				          size: field.size,
+				          visible: field.visible
+				        })
+				      });
+				      scheduleOnce('afterRender', () => {
+				        controller.set(`${tableOptionsName}.columns`, columns.sortBy('sortOrder'));
+				        this.send('saveGridLayoutSettings', gridId, tableOptionsName, controllerGridSettingsName);
+				      });
+				    }
+				  }
+				});
+			</code></pre>
+		</div>
+
+		<div class="content-block">
+			<h4>компонент настройки стобцов грида `components/grid-settings/layout`</h4>
+
+
+			<h4>template.hbs</h4>
+			<pre><code class="javascript hljs">
+				<div class="data-mixer__title">{{mixerTitle}}</div>
+				<ul class="data-mixer__fields">
+				    <li class={{toggleAllField.toggleAllButton.className}} {{action 'updateCheckedFieldsAll' toggleAllField.dataFieldsAll}}>
+				        <span class="data-mixer__field-icon">
+				          <span class="data-mixer__field-check-icon"></span>
+				        </span>
+				        <span class="data-mixer__field-name">{{toggleAllField.toggleAllButton.label}}</span>
+				    </li>
+				    <li class="data-mixer__placeholder" data-sort-after={{maxInvisibleSortOrder}}></li>
+				  {{#each mixerFields as |eachField|}}
+				      <li class="{{eachField.fieldClassName}}  js-draggable" data-sort-order="{{eachField.dataField.sortOrder}}">
+				        <span class="data-mixer__field-icon data-mixer__field-icon--move">
+				          <span class="icon-menu"></span>
+				        </span>
+				        <span class="data-mixer__field-icon" {{action 'updateCheckedFields' eachField.dataField}}>
+				          <span class="data-mixer__field-check-icon"></span>
+				        </span>
+				        <span class="data-mixer__field-name">{{eachField.dataField.label}}</span>
+				      </li>
+				      <li class="data-mixer__placeholder" data-sort-after="{{eachField.dataField.sortOrder}}"></li>
+				  {{/each}}
+				  {{#if onDefaultColumnSettingsIsNotEmpty}}
+				    <li class="data-mixer__action">
+				      <span class="data-mixer__action-name"{{action onDefaultColumnSettings}}>{{t "gridSettings.setDeafult"}}</span>
+				    </li>
+				  {{/if}}
+				</ul>
+			</code></pre>
+
+
+
+			<h4>component.js</h4>
+			<pre><code class="javascript hljs">
+				import {debug, error} from 'media-rights/utils/debug';
+				import {scheduleOnce} from '@ember/runloop';
+				import Component from '@ember/component';
+				import EmberObject, {computed} from '@ember/object';
+				import {isEmpty} from '@ember/utils';
+				import {inject as service} from '@ember/service';
+
+				/**
+				 *
+				 * @namespace Component
+				 * @class DataMixer
+				 * @author Natalia P.
+				 */
+
+				let MixerField = EmberObject.extend({
+				  fieldClassName: computed('dataField.visible', function () {
+				    return `data-mixer__field ${this.get('dataField.visible') ? 'data-mixer__field--checked' : ''}`;
+				  }),
+
+				  // `toggleAllButton` - описывает надпись(`toggleAllLabel`), css-класс(`toggleAllClassName`) для кнопки  "Выбрать всё" / "Снять выделение"
+				  // Текст "Выбрать всё" отображается на кнопке, если есть хотя бы один невыделенный элемент в спсике меню,
+				  // иначе отображается текст "Снять выделение"
+				  toggleAllButton: computed(`dataFieldsAll.@each.visible`, `i18n`, function () {
+				    let findOneNotVisible = this.dataFieldsAll.find((item) => item.get('visible') === false);
+				    let toggleAllLabel = isEmpty(findOneNotVisible) ? this.i18n.t('clearSelection') : this.i18n.t('selectAll');
+				    let toggleAllClassName = `data-mixer__field  data-mixer__field--toggle-all  ${isEmpty(findOneNotVisible) ? 'data-mixer__field--checked' : ''}`;
+
+				    return EmberObject.create({
+				      label: toggleAllLabel,
+				      className: toggleAllClassName,
+				    });
+				  }),
+				});
+
+				export default Component.extend({
+				  i18n: service(),
+				  classNames: ['data-miser'],
+				  gridHandler: service('handlers/dataset-table'),
+				  mixerFields: computed('mixerData', function () {
+				    let mixerFields = [];
+				    if (!isEmpty(this.mixerData)) {
+				      mixerFields = this.mixerData
+				        .filter(f => !isEmpty(f.get("label")))
+				        .map((eachField) => {
+				          return MixerField.create({
+				            dataField: eachField
+				          });
+				        })
+				        .sort((a, b) => {
+				          return +a.dataField.sortOrder - +b.dataField.sortOrder
+				        });
+
+				      // В меню настроек таблицы первым элементом добавить пункт "Выбрать все" / "Снять выделение"
+				    }
+				    scheduleOnce('afterRender', this, () => {
+				      this.setDragDrop();
+				    });
+				    debug('mixerFields', mixerFields);
+				    return mixerFields;
+				  }),
+				  maxInvisibleSortOrder: computed('mixerData', function () {
+				    let maxSortOrder = -1;
+				    if (!isEmpty(this.mixerData)) {
+				      maxSortOrder = this.mixerData
+				        .filter(f => isEmpty(f.get("label")))
+				        .reduce( (max, item) => {
+				          return max > item.sortOrder ? max : item.sortOrder;
+				        }, -1);
+				    }
+				    return maxSortOrder;
+				  }),
+				  didRender: function () {
+				    this._super(...arguments);
+				  },
+				  toggleAllField: computed(function () {
+				    return MixerField.create({
+				      dataFieldsAll: this.mixerData,
+				      isToggleAll: true,
+				      i18n: this.i18n,
+				    })
+				  }),
+				  hidePlaceholder: function (target) {
+				    target.removeClass('visible');
+				  },
+				  showPlaceholder: function (target) {
+				    target.addClass('visible');
+				  },
+				  setDragDrop: function () {
+				    let anchor = this.$(".data-mixer__field.js-draggable");
+				    if (!this.dragDropInitialized) {
+				      anchor.jqxDragDrop({
+				        revert: true,
+				        appendTo: 'parent',
+				        opacity: 1,
+				        dropTarget: $(".data-mixer__placeholder")
+				      });
+				      anchor.off('dropTargetEnter').on('dropTargetEnter', (event) => {
+				        this.showPlaceholder($(event.args.target[0]));
+				        anchor.jqxDragDrop('dropAction', 'none');
+				        this.set('currentDropTarget', $(event.args.target));
+				        anchor.jqxDragDrop('data', {
+				          id: event.currentTarget.parentElement.id,
+				          dropTarget: $(event.args.target)
+				        });
+				      });
+				      anchor.off('dropTargetLeave').on('dropTargetLeave', (event) => {
+				        this.hidePlaceholder($(event.args.target[0]));
+				        anchor.jqxDragDrop('dropAction', 'default');
+				        anchor.jqxDragDrop('data', null);
+				      });
+				      anchor.off('dragStart').on('dragStart', (event) => {
+				        anchor.jqxDragDrop('dropAction', 'default');
+				        anchor.jqxDragDrop('data', null);
+				      });
+				      anchor.off('dragEnd').on('dragEnd', (event) => {
+				        if (event.args.dropTarget && event.args.dropTarget[0]) {
+				          this.hidePlaceholder($(event.args.dropTarget[0]));
+				          this.send('updateSortFields',
+				            parseInt(event.currentTarget.dataset.sortOrder),
+				            parseInt(event.args.dropTarget[0].dataset.sortAfter));
+				        }
+				      });
+				    }
+				  },
+				  onDefaultColumnSettingsIsNotEmpty: computed('onDefaultColumnSettings', function () {
+				    return !isEmpty(this.onDefaultColumnSettings);
+				  }),
+				  actions: {
+				    updateCheckedFields(field) {
+				      field.set('visible', !field.get("visible"));
+				      this.gridHandler.send(this.idDatasetTable, 'adjustColumnSizes');
+				      if (this.onChangeVisibleColumns) this.onChangeVisibleColumns(field);
+				    },
+
+				    // `updateCheckedFieldsAll(fields)` - выбрать/убрать все столбцы,  для кнопки "Выбрать" / "Снять выделение"
+				    updateCheckedFieldsAll(fields) {
+				      let findOneNotVisible = fields.find((item) => item.get('visible') === false); // `findOneNotVisible` - проверка на наличие хотя бы одного "невыделенного" столбца таблицы
+				      let visible = isEmpty(findOneNotVisible) ? false : true; // `visible` - отобразить все === true, если есть хотя бы один "невыделенный" столбец в таблице
+
+				      fields.forEach((field) => {
+				        // (1) установить флаг отображения текущего столбца
+				        field.set('visible', visible);
+				        // (2) пересчитать ширину столбцов грида
+				        this.gridHandler.send(this.idDatasetTable, 'adjustColumnSizes');
+				        if (this.onChangeVisibleColumns) this.onChangeVisibleColumns(field);
+				      });
+				    },
+				    updateSortFields(currentSortOrder, newSortOrder) {
+				      let fields = this.mixerData;
+				      let rearranged = [];
+				      if (currentSortOrder > newSortOrder) {
+				        fields.sortBy('sortOrder').forEach(function (field) {
+				          if (field.get("sortOrder") === currentSortOrder) field.set("sortOrder", newSortOrder + 1);
+				          else if (field.get("sortOrder") > newSortOrder && field.get("sortOrder") < currentSortOrder) field.set("sortOrder", field.get("sortOrder") + 1);
+				          rearranged.pushObject(field);
+				        });
+				      } else if (currentSortOrder < newSortOrder) {
+				        fields.sortBy('sortOrder').reverseObjects().forEach(function (field) {
+				          if (field.get("sortOrder") === currentSortOrder) field.set("sortOrder", newSortOrder);
+				          else if (field.get("sortOrder") <= newSortOrder && field.get("sortOrder") > currentSortOrder) field.set("sortOrder", field.get("sortOrder") - 1);
+				          rearranged.pushObject(field);
+				        });
+				      } else rearranged = fields;
+				      let i = 0;
+				      this.set('mixerData', rearranged.sortBy("sortOrder").map(f => {
+				        f.set('sortOrder', i++);
+				        return f;
+				      }));
+				      if (this.onChangeColumnsOrder) this.onChangeColumnsOrder();
+				    },
+				  }
+				});
+			</code></pre>
+		</div>
+
+		<div class="content-block">
+			<h4></h4>
+			<pre><code class="javascript hljs">
+				
+			</code></pre>
+		</div>
+
+		<div class="content-block">
+			<h4></h4>
+			<pre><code class="javascript hljs">
+				
+			</code></pre>
+		</div>
+
+		<div class="content-block">
+			<h4></h4>
+			<pre><code class="javascript hljs">
+				
+			</code></pre>
+		</div>
+
+		<div class="content-block">
+			<h4></h4>
+			<pre><code class="javascript hljs">
+				
+			</code></pre>
+		</div>
+
+		<div class="content-block">
+			<h4></h4>
+			<pre><code class="javascript hljs">
+				
+			</code></pre>
+		</div>		
+	</div>
+
+
+	<div id="content-section--imports" class="content-section">
+		<h3 class="content-section__heading">imports (примеры всевозможных импортов)</h3>
+
+		<div class="content-block">
+			<pre><code class="javascript hljs">
+				import { debug, error } from 'media-rights/utils/debug';
+				import EmberObject, { computed, observer } from '@ember/object';
+				import { inject as controller } from '@ember/controller';
+				import { inject as service } from '@ember/service';
+				import { isEmpty } from '@ember/utils';
+
+				import FormEdit from 'media-rights/controllers/form-edit';
+				import DataSetTableOptions from "media-rights/utils/classes/app/dataset-table/options";
+				import DataSetTableEvents from 'media-rights/utils/classes/app/dataset-table/events'; // события
+				import DataSetTableColumn from "media-rights/utils/classes/app/dataset-table/column";
+				import DataSetTableColumnSelected from "media-rights/utils/classes/app/dataset-table/column-selected";
+				import DataSetTableColumnSelectInput from "media-rights/utils/classes/app/dataset-table/column-select-input";
+
+				import SendAlert from "media-rights/mixins/send-alert";
+				import Pagination from 'media-rights/mixins/pagination';
+				import ShortCutPanelButtons from 'media-rights/mixins/shortcut-panel-buttons';
+				import ModelSave from 'media-rights/mixins/model-save';
+				import Validation from 'media-rights/mixins/validation';
+
+				import { debug, error } from 'media-rights/utils/debug';
+				import { scheduleOnce } from '@ember/runloop';
+				import BaseController from 'media-rights/controllers/base';
+				import BusinessObjGrants from 'media-rights/mixins/business-obj-grants';
+				import DataSetTableOptions from "media-rights/utils/classes/app/dataset-table/options";
+				import DataSetTableEvents from "media-rights/utils/classes/app/dataset-table/events"; // события
+				import DataSetTableColumn from "media-rights/utils/classes/app/dataset-table/column"; // колонки
+				import DataSetTableSummary from "media-rights/utils/classes/app/dataset-table/summary";
+				import DataSetTableColumnIcon from "media-rights/utils/classes/app/dataset-table/column-icon";
+				import FormEdit from 'media-rights/controllers/form-edit';
+				import ModelSave from 'media-rights/mixins/model-save';
+				import ShortCutPanelButtons from 'media-rights/mixins/shortcut-panel-buttons';
+				import Validation from 'media-rights/mixins/validation';
+				import EmberObject, { computed, observer } from '@ember/object';
+				import { inject as service } from '@ember/service';
+				import { isEmpty } from '@ember/utils';
+			</code></pre>
+		</div>
+	</div>
+
+
+	<div id="content-section--panel-filter" class="content-section">
+		<h3 class="content-section__heading">@filter добавление фильтра(функциональный компонент)</h3>
+
+		<div class="content-block  content-block--intro">
+			<h4>@filter</h4>
+			<br /><br />(1) определить название для свойства, в котором будет храниться значение фильтра(напримр licRightOptionsFilter)
+			<br /><br />(2) в hbs добавить разметку фильтра(адабтировать вариант разметки, исправить, если нужно, значения для `inputId` и `inputValue`) 
+			<br /><br />(3) в файле контроллера добавить начальное значение фильтра(например `licRightOptionsFilter: null, ...`)
+			<br /><br />(4) в файле контроллеоа добавить(или найти существующий) observer, который будет тригерить отправку запроса на сервер при изменении значения фильтра, добавить в него свойство-значение фильтра
+			<br /><br />(5) для запроса, который тригерится фильтром, настроить query(или queryParams), добавить в него поле `filter`, в которое будет передаваться значение из фильтра("свойство-значение фильтра")
+			<br /><br />(6) сохранить и протестировать
+		</div>
+
+		<div class="content-block">
+			<h4>template.hbs</h4>
+			<pre><code class="javascript hljs">
+				{{#panel/panel-filter}}
+				  {{input/tmpl/text-input
+				    inputId='filter'
+				    inputTitle=(t 'filter')
+				    inputValue=licenseFilter
+				    updateGrant=1}}
+				{{/panel/panel-filter}}
+
+			 // добавлять внутрь {{#panel/panel-aside}} когда используется в гриде
+			</code></pre>
+		</div>
+
+		<div class="content-block">
+			<h4>template.hbs, варианты разметки фильтра(когда не в панели грида)</h4>
+			<pre><code class="javascript hljs">
+				{{#layout/layout-column columnMode='md-12'}}
+				  {{#form/form-field
+				    fieldLabel=(t 'filter')
+				    fieldLabelFor='rightOptionsFilter'}}
+				    {{input/tmpl/text-input
+				      inputId='rightOptionsFilter'
+				      inputTitle=(t 'filter')
+				      inputValue=rightOptionsFilter
+				      updateGrant=1}}
+				  {{/form/form-field}}
+				{{/layout/layout-column}}
+			</code></pre>
+		</div>
+
+		<div class="content-block">
+			<h4>controller.js</h4>
+			<pre><code class="javascript hljs">
+				licenseFilter: null,
+
+				onLicenseFilter: observer('licenseFilter', function () {
+				  this.send("reloadLicenses");
+				}),
+			</code></pre>
+		</div>
+
+		<div class="content-block">
+			<h4>route.js</h4>
+			<pre><code class="javascript hljs">
+				reloadLicenses: function(controller, model, id) {
+				  let params = this.paramsFor(this.routeName);
+				  params.idDeal = model.id;
+				  <b style="border: 1px dotted red; font-weight: 900; padding: 3px; ">(!) params.filter = controller.licenseFilter;</b>
+				  if (params.idDeal != null) {
+				    this.store.query('license', params).then(
+				      function (licenses) {
+				        controller.set(`licensesSelected`, []);
+				        controller.set('licenses', licenses);
+				        controller.set('totalPages', licenses.meta.page.totalPages);
+				        if (!isEmpty(id) && id != -1) controller.selectLicenseById(id);
+				      });
+				  }
+				  else {
+				    controller.set('licenses', null);
+				    controller.set('totalPages', 0);
+				  }
+				},
+			</code></pre>
+		</div>
+	</div>
+
+
+
+
+<!-- UNSORTED, DIRTY -->
 
 	<pre>
 		klfImpRepDataTableOptions: computed('i18n.locale', function () {
@@ -122,106 +881,5 @@
 
 		
 	</pre>
-
-
-
-	<div id="content-section--imports" class="content-section">
-		<h3 class="content-section__heading">imports (примеры всевозможных импортов)</h3>
-
-		<div class="content-block">
-			<pre><code class="javascript hljs">
-				import { debug, error } from 'media-rights/utils/debug';
-				import EmberObject, { computed, observer } from '@ember/object';
-				import { inject as controller } from '@ember/controller';
-				import { inject as service } from '@ember/service';
-				import { isEmpty } from '@ember/utils';
-
-				import FormEdit from 'media-rights/controllers/form-edit';
-				import DataSetTableOptions from "media-rights/utils/classes/app/dataset-table/options";
-				import DataSetTableEvents from 'media-rights/utils/classes/app/dataset-table/events'; // события
-				import DataSetTableColumn from "media-rights/utils/classes/app/dataset-table/column";
-				import DataSetTableColumnSelected from "media-rights/utils/classes/app/dataset-table/column-selected";
-				import DataSetTableColumnSelectInput from "media-rights/utils/classes/app/dataset-table/column-select-input";
-
-				import SendAlert from "media-rights/mixins/send-alert";
-				import Pagination from 'media-rights/mixins/pagination';
-				import ShortCutPanelButtons from 'media-rights/mixins/shortcut-panel-buttons';
-				import ModelSave from 'media-rights/mixins/model-save';
-				import Validation from 'media-rights/mixins/validation';
-
-				import { debug, error } from 'media-rights/utils/debug';
-				import { scheduleOnce } from '@ember/runloop';
-				import BaseController from 'media-rights/controllers/base';
-				import BusinessObjGrants from 'media-rights/mixins/business-obj-grants';
-				import DataSetTableOptions from "media-rights/utils/classes/app/dataset-table/options";
-				import DataSetTableEvents from "media-rights/utils/classes/app/dataset-table/events"; // события
-				import DataSetTableColumn from "media-rights/utils/classes/app/dataset-table/column"; // колонки
-				import DataSetTableSummary from "media-rights/utils/classes/app/dataset-table/summary";
-				import DataSetTableColumnIcon from "media-rights/utils/classes/app/dataset-table/column-icon";
-				import FormEdit from 'media-rights/controllers/form-edit';
-				import ModelSave from 'media-rights/mixins/model-save';
-				import ShortCutPanelButtons from 'media-rights/mixins/shortcut-panel-buttons';
-				import Validation from 'media-rights/mixins/validation';
-				import EmberObject, { computed, observer } from '@ember/object';
-				import { inject as service } from '@ember/service';
-				import { isEmpty } from '@ember/utils';
-			</code></pre>
-		</div>
-	</div>
-
-
-	<div id="content-section--panel-filter" class="content-section">
-		<h3 class="content-section__heading">@filter добавление фильтра(функциональный компонент)</h3>
-
-		<div class="content-block">
-			<h4>template.hbs</h4>
-			<pre><code class="javascript hljs">
-				{{#panel/panel-filter}}
-				  {{input/tmpl/text-input
-				    inputId='filter'
-				    inputTitle=(t 'filter')
-				    inputValue=licenseFilter
-				    updateGrant=1}}
-				{{/panel/panel-filter}}
-
-			 // добавлять внутрь {{#panel/panel-aside}} когда используется в гриде
-			</code></pre>
-		</div>
-
-		<div class="content-block">
-			<h4>controller.js</h4>
-			<pre><code class="javascript hljs">
-				licenseFilter: null,
-
-				onLicenseFilter: observer('licenseFilter', function () {
-				  this.send("reloadLicenses");
-				}),
-			</code></pre>
-		</div>
-
-		<div class="content-block">
-			<h4>route.js</h4>
-			<pre><code class="javascript hljs">
-				reloadLicenses: function(controller, model, id) {
-				  let params = this.paramsFor(this.routeName);
-				  params.idDeal = model.id;
-				  <b style="border: 1px dotted red; font-weight: 900; padding: 3px; ">(!) params.filter = controller.licenseFilter;</b>
-				  if (params.idDeal != null) {
-				    this.store.query('license', params).then(
-				      function (licenses) {
-				        controller.set(`licensesSelected`, []);
-				        controller.set('licenses', licenses);
-				        controller.set('totalPages', licenses.meta.page.totalPages);
-				        if (!isEmpty(id) && id != -1) controller.selectLicenseById(id);
-				      });
-				  }
-				  else {
-				    controller.set('licenses', null);
-				    controller.set('totalPages', 0);
-				  }
-				},
-			</code></pre>
-		</div>
-	</div>
 </body>
 </html>
